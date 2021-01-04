@@ -19,16 +19,16 @@
 [v _i2c_stop i2c_stop `(v  1 e 1 0 ]
 "26
 [v _i2c_write i2c_write `(v  1 e 1 0 ]
-"17 C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+"19 C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
 [v _lcd_cmd lcd_cmd `(v  1 e 1 0 ]
-"24
-[v _lcd_data lcd_data `(v  1 e 1 0 ]
-"32
+"34
 [v _lcd_init lcd_init `(v  1 e 1 0 ]
-"146
+"148
 [v _lcd_backlight lcd_backlight `(v  1 e 1 0 ]
-"151
+"154
 [v _lcd_set_cursor lcd_set_cursor `(v  1 e 1 0 ]
+"176
+[v _lcd_print lcd_print `(v  1 e 1 0 ]
 "8 C:\Users\eigo\MPLABXProjects\I2C_LCD.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "50 C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
@@ -86,7 +86,7 @@
 [v _SSP2ADD SSP2ADD `VEuc  1 e 1 @538 ]
 "4331
 [v _SSP2STAT SSP2STAT `VEuc  1 e 1 @540 ]
-[s S138 . 1 `uc 1 BF 1 0 :1:0 
+[s S143 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -96,11 +96,11 @@
 `uc 1 SMP 1 0 :1:7 
 ]
 "4348
-[u S147 . 1 `S138 1 . 1 0 ]
-[v _SSP2STATbits SSP2STATbits `VES147  1 e 1 @540 ]
+[u S152 . 1 `S143 1 . 1 0 ]
+[v _SSP2STATbits SSP2STATbits `VES152  1 e 1 @540 ]
 "4393
 [v _SSP2CON1 SSP2CON1 `VEuc  1 e 1 @541 ]
-[s S159 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S164 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
@@ -110,13 +110,13 @@
 `uc 1 WCOL 1 0 :1:7 
 ]
 "4413
-[s S168 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S173 . 1 `uc 1 SSPM 1 0 :4:0 
 ]
-[u S170 . 1 `S159 1 . 1 0 `S168 1 . 1 0 ]
-[v _SSP2CON1bits SSP2CON1bits `VES170  1 e 1 @541 ]
+[u S175 . 1 `S164 1 . 1 0 `S173 1 . 1 0 ]
+[v _SSP2CON1bits SSP2CON1bits `VES175  1 e 1 @541 ]
 "4463
 [v _SSP2CON2 SSP2CON2 `VEuc  1 e 1 @542 ]
-[s S116 . 1 `uc 1 SEN 1 0 :1:0 
+[s S121 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -126,49 +126,64 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "4480
-[u S125 . 1 `S116 1 . 1 0 ]
-[v _SSP2CON2bits SSP2CON2bits `VES125  1 e 1 @542 ]
+[u S130 . 1 `S121 1 . 1 0 ]
+[v _SSP2CON2bits SSP2CON2bits `VES130  1 e 1 @542 ]
+"17 C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+[v __backlightval _backlightval `uc  1 e 1 0 ]
 "8 C:\Users\eigo\MPLABXProjects\I2C_LCD.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "32
 } 0
-"151 C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+"154 C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
 [v _lcd_set_cursor lcd_set_cursor `(v  1 e 1 0 ]
 {
 [v lcd_set_cursor@col col `uc  1 a 1 wreg ]
-"152
+"155
 [v lcd_set_cursor@row_offsets row_offsets `[4]uc  1 a 4 5 ]
-"160
+"163
 [v lcd_set_cursor@lownib lownib `uc  1 a 1 12 ]
-"159
+"162
 [v lcd_set_cursor@highnib highnib `uc  1 a 1 11 ]
-"157
+"160
 [v lcd_set_cursor@cmd cmd `uc  1 a 1 10 ]
-"151
+"154
 [v lcd_set_cursor@col col `uc  1 a 1 wreg ]
 [v lcd_set_cursor@row row `uc  1 p 1 2 ]
-[v lcd_set_cursor@F2499 F2499 `[4]uc  1 s 4 F2499 ]
+[v lcd_set_cursor@F2500 F2500 `[4]uc  1 s 4 F2500 ]
 [v lcd_set_cursor@col col `uc  1 a 1 9 ]
-"171
+"174
 } 0
-"32
+"176
+[v _lcd_print lcd_print `(v  1 e 1 0 ]
+{
+"180
+[v lcd_print@lownib lownib `uc  1 a 1 8 ]
+"179
+[v lcd_print@highnib highnib `uc  1 a 1 7 ]
+"178
+[v lcd_print@cmd cmd `uc  1 a 1 6 ]
+"176
+[v lcd_print@str str `*.25uc  1 p 2 2 ]
+"192
+} 0
+"34
 [v _lcd_init lcd_init `(v  1 e 1 0 ]
 {
-"144
-} 0
 "146
+} 0
+"148
 [v _lcd_backlight lcd_backlight `(v  1 e 1 0 ]
 {
-"149
+"152
 } 0
-"17
+"19
 [v _lcd_cmd lcd_cmd `(v  1 e 1 0 ]
 {
 [v lcd_cmd@cmd cmd `uc  1 a 1 wreg ]
 [v lcd_cmd@cmd cmd `uc  1 a 1 wreg ]
 [v lcd_cmd@cmd cmd `uc  1 a 1 1 ]
-"22
+"24
 } 0
 "26 C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
 [v _i2c_write i2c_write `(v  1 e 1 0 ]

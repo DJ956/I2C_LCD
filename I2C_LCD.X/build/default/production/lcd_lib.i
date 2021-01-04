@@ -4359,7 +4359,7 @@ uint8_t i2c_read(uint8_t ack);
 # 11 "lcd_lib.c" 2
 
 # 1 "./lcd_lib.h" 1
-# 20 "./lcd_lib.h"
+# 21 "./lcd_lib.h"
     void lcd_init();
     void lcd_backlight();
     void lcd_cmd(uint8_t cmd);
@@ -4372,6 +4372,8 @@ uint8_t i2c_read(uint8_t ack);
 
 
 
+
+uint8_t _backlightval;
 
 void lcd_cmd(uint8_t cmd){
     i2c_start();
@@ -4504,6 +4506,7 @@ void lcd_init(){
 
 void lcd_backlight(){
     lcd_cmd(0x08);
+    _backlightval = 0x08;
     _delay((unsigned long)((10)*(8000000/4000000.0)));
 }
 
@@ -4531,6 +4534,18 @@ void lcd_set_cursor(uint8_t col, uint8_t row){
 
 void lcd_print(char *str) {
     while (*str) {
-        lcd_data(*str++);
+        uint8_t cmd = *str++;
+        uint8_t highnib = (cmd & 0xf0) | 0b00000001;
+        uint8_t lownib = ((cmd << 4) & 0xf0) | 0b00000001;
+
+        lcd_cmd(highnib | _backlightval);
+        lcd_cmd(highnib | 0b00000100 | _backlightval);
+        lcd_cmd(highnib & ~0b00000100 | _backlightval);
+
+        _delay((unsigned long)((100)*(8000000/4000000.0)));
+
+        lcd_cmd(lownib | _backlightval);
+        lcd_cmd(lownib | 0b00000100 | _backlightval);
+        lcd_cmd(lownib & ~0b00000100 | _backlightval);
     }
 }

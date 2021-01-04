@@ -4406,7 +4406,7 @@ uint8_t i2c_read(uint8_t ack);
 # 4 "main.c" 2
 
 # 1 "./lcd_lib.h" 1
-# 20 "./lcd_lib.h"
+# 21 "./lcd_lib.h"
     void lcd_init();
     void lcd_backlight();
     void lcd_cmd(uint8_t cmd);
@@ -4440,6 +4440,6 @@ void main(void)
     lcd_backlight();
     lcd_set_cursor(0, 0);
 
-
+    lcd_print("HIZ");
     while(1){}
 }

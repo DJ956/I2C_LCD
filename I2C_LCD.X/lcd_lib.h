@@ -16,6 +16,7 @@ extern "C" {
 #define LCD_ADD 0x7E
 //#define LCD_ADD 0x27
 #define En 0b00000100
+#define Rs 0b00000001
 
     void lcd_init();
     void lcd_backlight();    

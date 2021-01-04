@@ -27,7 +27,7 @@ void main(void)
     lcd_backlight();
     lcd_set_cursor(0, 0);
     
-    //lcd_print("hello");
+    lcd_print("HIZ");
     while(1){}
 }
 /**

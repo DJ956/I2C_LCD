@@ -14,6 +14,8 @@
 #define ROW 2
 #define COL 16
 
+uint8_t _backlightval;
+
 void lcd_cmd(uint8_t cmd){
     i2c_start();
     i2c_write(LCD_ADD);  
@@ -145,6 +147,7 @@ void lcd_init(){
 
 void lcd_backlight(){
     lcd_cmd(0x08);
+    _backlightval = 0x08;
     __delay_us(10);
 }
 
@@ -172,6 +175,18 @@ void lcd_set_cursor(uint8_t col, uint8_t row){
 
 void lcd_print(char *str) {
     while (*str) {
-        lcd_data(*str++);
+        uint8_t cmd = *str++;
+        uint8_t highnib = (cmd & 0xf0) | Rs;
+        uint8_t lownib = ((cmd << 4) & 0xf0) | Rs;
+
+        lcd_cmd(highnib | _backlightval);
+        lcd_cmd(highnib | En | _backlightval);
+        lcd_cmd(highnib & ~En | _backlightval);
+
+        __delay_us(100);
+
+        lcd_cmd(lownib | _backlightval);
+        lcd_cmd(lownib | En | _backlightval);
+        lcd_cmd(lownib & ~En | _backlightval);            
     }    
 }
