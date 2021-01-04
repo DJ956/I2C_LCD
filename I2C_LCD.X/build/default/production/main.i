@@ -4406,25 +4406,22 @@ uint8_t i2c_read(uint8_t ack);
 # 4 "main.c" 2
 
 # 1 "./lcd_lib.h" 1
-# 21 "./lcd_lib.h"
+# 20 "./lcd_lib.h"
     void lcd_init();
     void lcd_backlight();
     void lcd_cmd(uint8_t cmd);
-    void lcd_data(uint8_t data);
     void lcd_clear();
     void lcd_set_cursor(uint8_t col, uint8_t row);
     void lcd_print();
-# 5 "main.c" 2
 
+    void command(uint8_t val, uint8_t mode);
+# 5 "main.c" 2
 
 
 void main(void)
 {
 
     SYSTEM_Initialize();
-
-
-
 
     WPUB = 0x24;
     OPTION_REGbits.nWPUEN = 0;
@@ -4434,12 +4431,16 @@ void main(void)
     SSP2CON2 = 0x0;
     SSP2STAT = 0;
 
-
-
     lcd_init();
     lcd_backlight();
     lcd_set_cursor(0, 0);
 
     lcd_print("HIZ");
+
+    _delay((unsigned long)((1000)*(8000000/4000.0)));
+
+    lcd_set_cursor(3, 0);
+    lcd_print("12:00");
+
     while(1){}
 }

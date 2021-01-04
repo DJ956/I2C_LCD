@@ -33,18 +33,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4331
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f1827.h: 4331: extern volatile unsigned char SSP2STAT __attribute__((address(0x21C)));
 [v _SSP2STAT `Vuc ~T0 @X0 0 e@540 ]
-"21 ./lcd_lib.h
-[; ;./lcd_lib.h: 21:     void lcd_init();
+"20 ./lcd_lib.h
+[; ;./lcd_lib.h: 20:     void lcd_init();
 [v _lcd_init `(v ~T0 @X0 0 e? ]
-"22
-[; ;./lcd_lib.h: 22:     void lcd_backlight();
+"21
+[; ;./lcd_lib.h: 21:     void lcd_backlight();
 [v _lcd_backlight `(v ~T0 @X0 0 e? ]
-"26
-[; ;./lcd_lib.h: 26:     void lcd_set_cursor(uint8_t col, uint8_t row);
+"24
+[; ;./lcd_lib.h: 24:     void lcd_set_cursor(uint8_t col, uint8_t row);
 [v _lcd_set_cursor `(v ~T0 @X0 0 ef2`uc`uc ]
-"27
-[; ;./lcd_lib.h: 27:     void lcd_print();
+"25
+[; ;./lcd_lib.h: 25:     void lcd_print();
 [v _lcd_print `(v ~T0 @X0 0 e? ]
+[v F183 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:\Program Files\Microchip\xc8\v2.31\pic\include\builtins.h
+[v __delay `JF183 ~T0 @X0 0 e ]
+[p i __delay ]
 "55 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f1827.h
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f1827.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -520,47 +524,56 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f1827.h: 6749: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
 [v $root$_main `(v ~T0 @X0 0 e ]
-"8 main.c
-[; ;main.c: 8: void main(void)
+"7 main.c
+[; ;main.c: 7: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"9
-[; ;main.c: 9: {
+"8
+[; ;main.c: 8: {
 {
 [e :U _main ]
 [f ]
-"11
-[; ;main.c: 11:     SYSTEM_Initialize();
+"10
+[; ;main.c: 10:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"16
-[; ;main.c: 16:     WPUB = 0x24;
+"12
+[; ;main.c: 12:     WPUB = 0x24;
 [e = _WPUB -> -> 36 `i `uc ]
-"17
-[; ;main.c: 17:     OPTION_REGbits.nWPUEN = 0;
+"13
+[; ;main.c: 13:     OPTION_REGbits.nWPUEN = 0;
 [e = . . _OPTION_REGbits 0 7 -> -> 0 `i `uc ]
-"19
-[; ;main.c: 19:     SSP2ADD = 0x13;
+"15
+[; ;main.c: 15:     SSP2ADD = 0x13;
 [e = _SSP2ADD -> -> 19 `i `uc ]
-"20
-[; ;main.c: 20:     SSP2CON1 = 0x28;
+"16
+[; ;main.c: 16:     SSP2CON1 = 0x28;
 [e = _SSP2CON1 -> -> 40 `i `uc ]
-"21
-[; ;main.c: 21:     SSP2CON2 = 0x0;
+"17
+[; ;main.c: 17:     SSP2CON2 = 0x0;
 [e = _SSP2CON2 -> -> 0 `i `uc ]
-"22
-[; ;main.c: 22:     SSP2STAT = 0;
+"18
+[; ;main.c: 18:     SSP2STAT = 0;
 [e = _SSP2STAT -> -> 0 `i `uc ]
-"26
-[; ;main.c: 26:     lcd_init();
+"20
+[; ;main.c: 20:     lcd_init();
 [e ( _lcd_init ..  ]
-"27
-[; ;main.c: 27:     lcd_backlight();
+"21
+[; ;main.c: 21:     lcd_backlight();
 [e ( _lcd_backlight ..  ]
-"28
-[; ;main.c: 28:     lcd_set_cursor(0, 0);
+"22
+[; ;main.c: 22:     lcd_set_cursor(0, 0);
 [e ( _lcd_set_cursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"30
-[; ;main.c: 30:     lcd_print("HIZ");
+"24
+[; ;main.c: 24:     lcd_print("HIZ");
 [e ( _lcd_print :s 1C ]
+"26
+[; ;main.c: 26:     _delay((unsigned long)((1000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"28
+[; ;main.c: 28:     lcd_set_cursor(3, 0);
+[e ( _lcd_set_cursor (2 , -> -> 3 `i `uc -> -> 0 `i `uc ]
+"29
+[; ;main.c: 29:     lcd_print("12:00");
+[e ( _lcd_print :s 2C ]
 "31
 [; ;main.c: 31:     while(1){}
 [e :U 356 ]
@@ -574,3 +587,4 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 354 ]
 }
 [a 1C 72 73 90 0 ]
+[a 2C 49 50 58 48 48 0 ]

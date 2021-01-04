@@ -4359,14 +4359,15 @@ uint8_t i2c_read(uint8_t ack);
 # 11 "lcd_lib.c" 2
 
 # 1 "./lcd_lib.h" 1
-# 21 "./lcd_lib.h"
+# 20 "./lcd_lib.h"
     void lcd_init();
     void lcd_backlight();
     void lcd_cmd(uint8_t cmd);
-    void lcd_data(uint8_t data);
     void lcd_clear();
     void lcd_set_cursor(uint8_t col, uint8_t row);
     void lcd_print();
+
+    void command(uint8_t val, uint8_t mode);
 # 12 "lcd_lib.c" 2
 
 
@@ -4377,128 +4378,93 @@ uint8_t _backlightval;
 
 void lcd_cmd(uint8_t cmd){
     i2c_start();
-    i2c_write(0x7E);
+    i2c_write(0x3F << 1);
     i2c_write(cmd);
     i2c_stop();
-}
-
-void lcd_data(uint8_t data){
-    i2c_start();
-    i2c_write(0x7E);
-    i2c_write(0x40);
-    i2c_write(data);
-    i2c_stop();
+    _delay((unsigned long)((10)*(8000000/4000000.0)));
 }
 
 void lcd_init(){
     _delay((unsigned long)((400)*(8000000/4000.0)));
 
     lcd_cmd(0x30);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x34);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x30);
     _delay((unsigned long)((5)*(8000000/4000.0)));
 
     lcd_cmd(0x30);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x34);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x30);
     _delay((unsigned long)((5)*(8000000/4000.0)));
 
     lcd_cmd(0x30);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x34);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x30);
     _delay((unsigned long)((300)*(8000000/4000000.0)));
 
     lcd_cmd(0x20);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x24);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x20);
     _delay((unsigned long)((10)*(8000000/4000000.0)));
 
 
     lcd_cmd(0x20);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x24);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x20);
 
     _delay((unsigned long)((100)*(8000000/4000000.0)));
 
     lcd_cmd(0x80);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x84);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x80);
 
 
 
     lcd_cmd(0x00);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x04);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x00);
 
     _delay((unsigned long)((100)*(8000000/4000000.0)));
 
     lcd_cmd(0xC0);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0xC4);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0xC0);
 
 
 
     lcd_cmd(0x00);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x04);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x00);
 
     _delay((unsigned long)((100)*(8000000/4000000.0)));
 
     lcd_cmd(0x10);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x14);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x10);
 
     _delay((unsigned long)((5)*(8000000/4000.0)));
 
 
     lcd_cmd(0x00);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x04);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x00);
 
     _delay((unsigned long)((100)*(8000000/4000000.0)));
 
     lcd_cmd(0x60);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x64);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x60);
 
 
 
     lcd_cmd(0x00);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x04);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x00);
 
     _delay((unsigned long)((100)*(8000000/4000000.0)));
 
     lcd_cmd(0x20);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x24);
-    _delay((unsigned long)((10)*(8000000/4000000.0)));
     lcd_cmd(0x20);
 
     _delay((unsigned long)((3)*(8000000/4000.0)));
@@ -4510,16 +4476,29 @@ void lcd_backlight(){
     _delay((unsigned long)((10)*(8000000/4000000.0)));
 }
 
+void lcd_clear(){
+    command(0x01, 0);
+}
+
 void lcd_set_cursor(uint8_t col, uint8_t row){
     uint8_t row_offsets[] = {0x00, 0x40, 0x14, 0x54};
     if(row > 2){
         row = 2 - 1;
     }
+    uint8_t cmd = 0x80 | (col + row_offsets[row]);
+    command(cmd, 0);
+}
 
-    uint8_t cmd = 0x88 | (col + row_offsets[row]);
+void lcd_print(char *str) {
+    while (*str) {
+        uint8_t cmd = *str++;
+        command(cmd, 0b00000001);
+    }
+}
 
-    uint8_t highnib = (cmd & 0xf8);
- uint8_t lownib = ((cmd >> 4) & 0xf8);
+void command(uint8_t val, uint8_t mode){
+    uint8_t highnib = (val & 0xf0) | _backlightval | mode;
+ uint8_t lownib = ((val << 4) & 0xf0) | _backlightval | mode;
 
  lcd_cmd(highnib);
     lcd_cmd(highnib | 0b00000100);
@@ -4530,22 +4509,4 @@ void lcd_set_cursor(uint8_t col, uint8_t row){
  lcd_cmd(lownib);
     lcd_cmd(lownib | 0b00000100);
     lcd_cmd(lownib & ~0b00000100);
-}
-
-void lcd_print(char *str) {
-    while (*str) {
-        uint8_t cmd = *str++;
-        uint8_t highnib = (cmd & 0xf0) | 0b00000001;
-        uint8_t lownib = ((cmd << 4) & 0xf0) | 0b00000001;
-
-        lcd_cmd(highnib | _backlightval);
-        lcd_cmd(highnib | 0b00000100 | _backlightval);
-        lcd_cmd(highnib & ~0b00000100 | _backlightval);
-
-        _delay((unsigned long)((100)*(8000000/4000000.0)));
-
-        lcd_cmd(lownib | _backlightval);
-        lcd_cmd(lownib | 0b00000100 | _backlightval);
-        lcd_cmd(lownib & ~0b00000100 | _backlightval);
-    }
 }
