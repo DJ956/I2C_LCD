@@ -12,74 +12,27 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\I2C_LCD.X.production.o
-cinit CODE 0 29 29 1E 2
-text1 CODE 0 268 268 18 2
-text2 CODE 0 14C 14C 2D 2
-text3 CODE 0 E2 E2 3B 2
-text4 CODE 0 383 383 5 2
-text5 CODE 0 179 179 2C 2
-text6 CODE 0 347 347 8 2
-text7 CODE 0 371 371 6 2
-text8 CODE 0 377 377 6 2
-text9 CODE 0 31D 31D C 2
-text10 CODE 0 303 303 D 2
-text11 CODE 0 3BA 3BA 4 2
-text12 CODE 0 298 298 17 2
-text13 CODE 0 357 357 7 2
-text14 CODE 0 335 335 9 2
-text15 CODE 0 329 329 C 2
-text17 CODE 0 3BE 3BE 4 2
-text18 CODE 0 1D1 1D1 2B 2
-text19 CODE 0 3CA 3CA 3 2
-text20 CODE 0 1A5 1A5 2C 2
-text21 CODE 0 388 388 5 2
-text22 CODE 0 38D 38D 5 2
-text23 CODE 0 392 392 5 2
-text24 CODE 0 397 397 5 2
-text25 CODE 0 39C 39C 5 2
-text26 CODE 0 3A1 3A1 5 2
-text27 CODE 0 3A6 3A6 5 2
-text28 CODE 0 3AB 3AB 5 2
-text29 CODE 0 35E 35E 7 2
-text30 CODE 0 9C 9C 46 2
-text31 CODE 0 47 47 55 2
-text32 CODE 0 34F 34F 8 2
-text33 CODE 0 33E 33E 9 2
-text34 CODE 0 3B0 3B0 5 2
-text35 CODE 0 11D 11D 2F 2
-text36 CODE 0 3CD 3CD 3 2
-text37 CODE 0 37D 37D 6 2
-text38 CODE 0 3B5 3B5 5 2
-text39 CODE 0 3C2 3C2 4 2
-text40 CODE 0 3D0 3D0 3 2
-text41 CODE 0 3C6 3C6 4 2
-text42 CODE 0 3D3 3D3 3 2
-text43 CODE 0 280 280 18 2
-text44 CODE 0 2AF 2AF 11 2
-text45 CODE 0 2C0 2C0 11 2
-text46 CODE 0 2D1 2D1 11 2
-text47 CODE 0 3DC 3DC 2 2
-text48 CODE 0 3DE 3DE 2 2
-text49 CODE 0 2E2 2E2 11 2
-text50 CODE 0 310 310 D 2
-text51 CODE 0 222 222 26 2
-text52 CODE 0 2F3 2F3 10 2
-text53 CODE 0 3D6 3D6 3 2
-text54 CODE 0 3D9 3D9 3 2
-maintext CODE 0 1FC 1FC 26 2
-cstackCOMMON COMMON 1 70 70 A 1
-cstackBANK0 BANK0 1 3D 3D E 1
-stringtext1 STRCODE 0 248 248 20 2
-intentry CODE 0 4 4 23 2
-bssBANK0 BANK0 1 20 20 1D 1
-idataBANK0 CODE 0 365 365 6 2
-dataBANK0 BANK0 1 4B 4B 6 1
-clrtext CODE 0 36B 36B 6 2
-bssCOMMON COMMON 1 7A 7A 2 1
+cinit CODE 0 7ED 7ED 13 2
+text1 CODE 0 644 644 4D 2
+text2 CODE 0 691 691 15C 2
+text3 CODE 0 5CF 5CF 9 2
+text4 CODE 0 617 617 10 2
+text5 CODE 0 607 607 10 2
+text6 CODE 0 5C8 5C8 7 2
+text7 CODE 0 5E2 5E2 A 2
+text8 CODE 0 5EC 5EC C 2
+text9 CODE 0 5D8 5D8 A 2
+text10 CODE 0 5B9 5B9 4 2
+text11 CODE 0 5F8 5F8 F 2
+text12 CODE 0 5C1 5C1 7 2
+maintext CODE 0 627 627 1D 2
+cstackCOMMON COMMON 1 70 70 D 1
+idataBANK0 CODE 0 5BD 5BD 4 2
+dataBANK0 BANK0 1 20 20 4 1
 config CONFIG 4 8007 8007 2 2
-$C:\Users\dexte\AppData\Local\Temp\sc9c.o
+$C:\Users\eigo\AppData\Local\Temp\s6v4.o
 reset_vec CODE 0 0 0 2 2
-end_init CODE 0 27 27 2 2
+end_init CODE 0 2 2 2 2
 config CONFIG 4 8007 8007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -87,20 +40,20 @@ config CONFIG 4 8007 8007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 51-6F 1
+RAM 24-6F 1
 RAM A0-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
 RAM 220-24F 1
-BANK0 51-6F 1
+BANK0 24-6F 1
 BANK1 A0-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
 BANK4 220-24F 1
-CONST 2-3 2
-CONST 3E0-FFF 2
-ENTRY 2-3 2
-ENTRY 3E0-FFF 2
+CONST 4-5B8 2
+CONST 800-FFF 2
+ENTRY 4-5B8 2
+ENTRY 800-FFF 2
 IDLOC 8000-8003 2
 SFR10 500-56F 1
 SFR11 580-5EF 1
@@ -124,9 +77,9 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-STACK 2031-216F 1
-CODE 2-3 2
-CODE 3E0-FFF 2
+STACK 2004-216F 1
+CODE 4-5B8 2
+CODE 800-FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -138,12 +91,12 @@ SFR7 380-3EF 1
 SFR8 400-46F 1
 SFR9 480-4EF 1
 BIGRAM 2000-216F 1
-COMMON 7C-7D 1
+COMMON 7D-7D 1
 EEDATA F000-F0FF 2
-STRCODE 2-3 2
-STRCODE 3E0-FFF 2
-STRING 2-3 2
-STRING 3E0-FFF 2
+STRCODE 4-5B8 2
+STRCODE 800-FFF 2
+STRING 4-5B8 2
+STRING 800-FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -158,338 +111,180 @@ STRING 3E0-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\I2C_LCD.X.production.o
-29 cinit CODE >2888:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-29 cinit CODE >2891:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-29 cinit CODE >2917:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-2A cinit CODE >2918:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-2B cinit CODE >2919:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-2C cinit CODE >2920:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-2D cinit CODE >2921:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-2E cinit CODE >2922:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-2F cinit CODE >2923:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-30 cinit CODE >2924:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-31 cinit CODE >2925:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-32 cinit CODE >2926:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-33 cinit CODE >2927:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-34 cinit CODE >2928:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-35 cinit CODE >2929:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-36 cinit CODE >2930:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-37 cinit CODE >2931:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-38 cinit CODE >2932:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-39 cinit CODE >2949:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-3A cinit CODE >2950:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-3B cinit CODE >2954:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-3C cinit CODE >2955:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-3D cinit CODE >2956:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-3E cinit CODE >2957:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-3F cinit CODE >2958:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-40 cinit CODE >2959:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-43 cinit CODE >2965:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-43 cinit CODE >2967:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-44 cinit CODE >2968:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-45 cinit CODE >2969:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-4 intentry CODE >52:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/interrupt_manager.c
-6 intentry CODE >55:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/interrupt_manager.c
-A intentry CODE >57:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/interrupt_manager.c
-14 intentry CODE >59:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/interrupt_manager.c
-19 intentry CODE >60:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/interrupt_manager.c
-1A intentry CODE >61:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/interrupt_manager.c
-25 intentry CODE >68:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/interrupt_manager.c
-25 intentry CODE >74:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/interrupt_manager.c
-3D9 text54 CODE >574:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3D9 text54 CODE >576:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3DB text54 CODE >577:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3D6 text53 CODE >594:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3D6 text53 CODE >596:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3D8 text53 CODE >597:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-2F3 text52 CODE >264:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-2F4 text52 CODE >266:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-2F9 text52 CODE >268:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-2FD text52 CODE >269:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-301 text52 CODE >270:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-302 text52 CODE >272:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-222 text51 CODE >304:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-223 text51 CODE >306:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-229 text51 CODE >308:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-231 text51 CODE >309:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-239 text51 CODE >310:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-23A text51 CODE >313:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-242 text51 CODE >314:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-247 text51 CODE >316:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-310 text50 CODE >274:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-310 text50 CODE >276:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-31C text50 CODE >277:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-2E2 text49 CODE >163:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2E2 text49 CODE >165:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2EA text49 CODE >166:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2F1 text49 CODE >167:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2F2 text49 CODE >168:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-3DE text48 CODE >521:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3DE text48 CODE >523:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3DF text48 CODE >524:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3DC text47 CODE >526:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3DC text47 CODE >528:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3DD text47 CODE >529:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-2D1 text46 CODE >142:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2D1 text46 CODE >144:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2D9 text46 CODE >145:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2E0 text46 CODE >146:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2E1 text46 CODE >147:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2C0 text45 CODE >149:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2C0 text45 CODE >151:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2C8 text45 CODE >152:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2CF text45 CODE >153:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2D0 text45 CODE >154:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2AF text44 CODE >156:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2AF text44 CODE >158:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2B7 text44 CODE >159:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2BE text44 CODE >160:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-2BF text44 CODE >161:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-280 text43 CODE >170:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-280 text43 CODE >172:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-28F text43 CODE >173:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-296 text43 CODE >174:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-297 text43 CODE >175:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/examples/i2c2_master_example.c
-3D3 text42 CODE >584:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3D3 text42 CODE >586:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3D5 text42 CODE >587:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3C6 text41 CODE >610:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3C6 text41 CODE >612:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3C8 text41 CODE >613:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3C9 text41 CODE >614:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3D0 text40 CODE >564:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3D0 text40 CODE >566:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3D2 text40 CODE >567:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3C2 text39 CODE >604:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3C2 text39 CODE >606:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3C4 text39 CODE >607:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3C5 text39 CODE >608:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3B5 text38 CODE >569:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3B6 text38 CODE >571:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3B9 text38 CODE >572:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-37D text37 CODE >599:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-37D text37 CODE >601:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-382 text37 CODE >602:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3CD text36 CODE >647:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3CD text36 CODE >649:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3CF text36 CODE >650:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-11D text35 CODE >411:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-11D text35 CODE >413:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-11F text35 CODE >414:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-120 text35 CODE >418:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-124 text35 CODE >420:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-127 text35 CODE >421:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-129 text35 CODE >424:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-12D text35 CODE >425:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-14B text35 CODE >426:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3B0 text34 CODE >335:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3B0 text34 CODE >337:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3B2 text34 CODE >338:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3B3 text34 CODE >339:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3B4 text34 CODE >340:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-33E text33 CODE >342:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-33E text33 CODE >344:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-340 text33 CODE >345:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-345 text33 CODE >346:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-346 text33 CODE >347:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-34F text32 CODE >349:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-34F text32 CODE >351:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-351 text32 CODE >352:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-355 text32 CODE >353:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-356 text32 CODE >354:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-47 text31 CODE >356:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-47 text31 CODE >358:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-50 text31 CODE >363:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-54 text31 CODE >365:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-58 text31 CODE >369:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-5C text31 CODE >370:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-7F text31 CODE >372:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-7F text31 CODE >374:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-81 text31 CODE >375:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-8D text31 CODE >376:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-9B text31 CODE >378:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-9C text30 CODE >380:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-9C text30 CODE >382:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-AA text30 CODE >383:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-B4 text30 CODE >385:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-B7 text30 CODE >386:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-B9 text30 CODE >388:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-B9 text30 CODE >390:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-BA text30 CODE >391:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-BB text30 CODE >395:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-BF text30 CODE >399:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-C3 text30 CODE >400:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-E1 text30 CODE >402:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-35E text29 CODE >404:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-35E text29 CODE >406:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-360 text29 CODE >407:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-363 text29 CODE >408:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-364 text29 CODE >409:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3AB text28 CODE >451:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3AB text28 CODE >453:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3AE text28 CODE >454:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3AF text28 CODE >455:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3A6 text27 CODE >457:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3A6 text27 CODE >459:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3A9 text27 CODE >460:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3AA text27 CODE >461:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3A1 text26 CODE >464:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3A1 text26 CODE >466:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3A4 text26 CODE >467:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3A5 text26 CODE >468:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-39C text25 CODE >470:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-39C text25 CODE >472:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-39F text25 CODE >473:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3A0 text25 CODE >474:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-397 text24 CODE >476:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-397 text24 CODE >478:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-39A text24 CODE >479:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-39B text24 CODE >480:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-392 text23 CODE >483:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-392 text23 CODE >485:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-395 text23 CODE >486:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-396 text23 CODE >487:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-38D text22 CODE >489:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-38D text22 CODE >491:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-390 text22 CODE >492:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-391 text22 CODE >493:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-388 text21 CODE >495:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-388 text21 CODE >497:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-38A text21 CODE >498:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-38B text21 CODE >499:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-38C text21 CODE >500:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-1A5 text20 CODE >501:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-1A5 text20 CODE >503:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-1A7 text20 CODE >504:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-1AB text20 CODE >505:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-1AC text20 CODE >509:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-1B0 text20 CODE >511:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-1B4 text20 CODE >512:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-1D0 text20 CODE >513:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3CA text19 CODE >642:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3CA text19 CODE >644:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3CC text19 CODE >645:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-1D1 text18 CODE >323:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-1D1 text18 CODE >325:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-1D4 text18 CODE >327:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-1E1 text18 CODE >329:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-1E6 text18 CODE >331:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-1FB text18 CODE >332:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3BE text17 CODE >318:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3BE text17 CODE >320:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-3C1 text17 CODE >321:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-329 text15 CODE >16:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-329 text15 CODE >17:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-32B text15 CODE >18:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-32D text15 CODE >19:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-32E text15 CODE >21:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-330 text15 CODE >22:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-331 text15 CODE >24:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-333 text15 CODE >25:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-334 text15 CODE >26:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-335 text14 CODE >167:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-335 text14 CODE >169:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-337 text14 CODE >170:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-339 text14 CODE >171:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-33A text14 CODE >172:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-33C text14 CODE >173:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-33D text14 CODE >174:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/i2c2_master.c
-357 text13 CODE >59:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
-357 text13 CODE >62:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
-35A text13 CODE >64:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
-35B text13 CODE >66:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
-35D text13 CODE >67:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
-298 text12 CODE >55:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
-298 text12 CODE >60:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
-29A text12 CODE >61:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
-29B text12 CODE >66:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
-29E text12 CODE >67:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
-2A0 text12 CODE >72:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
-2A3 text12 CODE >73:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
-2A5 text12 CODE >78:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
-2A8 text12 CODE >79:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
-2A9 text12 CODE >80:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
-2AB text12 CODE >86:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
-2AD text12 CODE >87:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
-2AE text12 CODE >94:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
-3BA text11 CODE >69:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
-3BA text11 CODE >72:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
-3BD text11 CODE >73:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
-303 text10 CODE >50:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
-303 text10 CODE >53:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
-306 text10 CODE >54:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
-309 text10 CODE >55:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
-30C text10 CODE >56:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
-30F text10 CODE >57:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
-31D text9 CODE >28:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-31D text9 CODE >29:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-328 text9 CODE >30:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-377 text8 CODE >32:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-377 text8 CODE >33:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-37A text8 CODE >34:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-37C text8 CODE >35:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-371 text7 CODE >37:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-371 text7 CODE >38:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-374 text7 CODE >39:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-376 text7 CODE >40:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-347 text6 CODE >42:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-347 text6 CODE >43:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-34A text6 CODE >44:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-34E text6 CODE >45:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\i2c_lib.c
-179 text5 CODE >16:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-17B text5 CODE >17:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-17E text5 CODE >18:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-186 text5 CODE >19:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-18D text5 CODE >20:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-198 text5 CODE >21:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-19B text5 CODE >22:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-1A4 text5 CODE >23:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-383 text4 CODE >39:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-383 text4 CODE >40:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-387 text4 CODE >41:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-E2 text3 CODE >25:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-E2 text3 CODE >26:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-EF text3 CODE >27:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-F3 text3 CODE >28:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-F7 text3 CODE >29:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-FB text3 CODE >30:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-FF text3 CODE >32:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-103 text3 CODE >33:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-110 text3 CODE >34:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-114 text3 CODE >35:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-118 text3 CODE >36:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-11C text3 CODE >37:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-14C text2 CODE >43:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-14E text2 CODE >44:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-151 text2 CODE >45:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-159 text2 CODE >46:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-161 text2 CODE >47:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-16C text2 CODE >48:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-16F text2 CODE >49:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-178 text2 CODE >50:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-268 text1 CODE >52:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-26A text1 CODE >53:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-26B text1 CODE >54:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-277 text1 CODE >53:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-27F text1 CODE >56:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
-1FC maintext CODE >9:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\main.c
-1FC maintext CODE >12:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\main.c
-1FF maintext CODE >14:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\main.c
-202 maintext CODE >16:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\main.c
-211 maintext CODE >18:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\main.c
-214 maintext CODE >19:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\main.c
-217 maintext CODE >20:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\main.c
-21B maintext CODE >21:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\main.c
-21F maintext CODE >23:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\main.c
-21F maintext CODE >26:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\main.c
-36B clrtext CODE >2938:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-36B clrtext CODE >2939:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-36C clrtext CODE >2940:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-36C clrtext CODE >2941:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-36D clrtext CODE >2942:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-36E clrtext CODE >2943:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-36F clrtext CODE >2944:C:\Users\dexte\AppData\Local\Temp\sc9c.s
-370 clrtext CODE >2945:C:\Users\dexte\AppData\Local\Temp\sc9c.s
+7ED cinit CODE >2085:C:\Users\eigo\AppData\Local\Temp\s6v4.s
+7ED cinit CODE >2088:C:\Users\eigo\AppData\Local\Temp\s6v4.s
+7ED cinit CODE >2102:C:\Users\eigo\AppData\Local\Temp\s6v4.s
+7F0 cinit CODE >2103:C:\Users\eigo\AppData\Local\Temp\s6v4.s
+7F1 cinit CODE >2104:C:\Users\eigo\AppData\Local\Temp\s6v4.s
+7F4 cinit CODE >2105:C:\Users\eigo\AppData\Local\Temp\s6v4.s
+7F5 cinit CODE >2106:C:\Users\eigo\AppData\Local\Temp\s6v4.s
+7F8 cinit CODE >2107:C:\Users\eigo\AppData\Local\Temp\s6v4.s
+7F9 cinit CODE >2108:C:\Users\eigo\AppData\Local\Temp\s6v4.s
+7FC cinit CODE >2109:C:\Users\eigo\AppData\Local\Temp\s6v4.s
+7FD cinit CODE >2115:C:\Users\eigo\AppData\Local\Temp\s6v4.s
+7FD cinit CODE >2117:C:\Users\eigo\AppData\Local\Temp\s6v4.s
+7FE cinit CODE >2118:C:\Users\eigo\AppData\Local\Temp\s6v4.s
+5C1 text12 CODE >58:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
+5C1 text12 CODE >61:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
+5C4 text12 CODE >63:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
+5C5 text12 CODE >65:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
+5C7 text12 CODE >66:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
+5F8 text11 CODE >55:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
+5F8 text11 CODE >60:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
+5FA text11 CODE >61:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
+5FB text11 CODE >66:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
+5FE text11 CODE >72:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
+601 text11 CODE >73:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
+603 text11 CODE >79:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
+605 text11 CODE >80:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
+606 text11 CODE >82:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/pin_manager.c
+5B9 text10 CODE >68:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
+5B9 text10 CODE >71:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
+5BC text10 CODE >72:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
+5D8 text9 CODE >50:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
+5D8 text9 CODE >53:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
+5DB text9 CODE >54:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
+5DE text9 CODE >55:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
+5E1 text9 CODE >56:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\mcc_generated_files/mcc.c
+5EC text8 CODE >5:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+5EC text8 CODE >6:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+5F7 text8 CODE >7:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+5E2 text7 CODE >9:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+5E2 text7 CODE >10:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+5E5 text7 CODE >11:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+5E7 text7 CODE >12:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+5EB text7 CODE >13:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+5C8 text6 CODE >15:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+5C8 text6 CODE >16:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+5CA text6 CODE >17:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+5CE text6 CODE >18:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+607 text5 CODE >26:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+608 text5 CODE >27:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+60B text5 CODE >28:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+60F text5 CODE >29:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+613 text5 CODE >30:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+616 text5 CODE >31:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\i2c.c
+617 text4 CODE >17:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+618 text4 CODE >18:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+61B text4 CODE >19:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+61F text4 CODE >20:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+623 text4 CODE >21:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+626 text4 CODE >22:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+5CF text3 CODE >146:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+5CF text3 CODE >147:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+5D3 text3 CODE >148:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+5D7 text3 CODE >149:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+691 text2 CODE >32:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+691 text2 CODE >33:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+69D text2 CODE >35:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6A1 text2 CODE >36:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6A5 text2 CODE >37:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6A9 text2 CODE >38:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6AD text2 CODE >39:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6B1 text2 CODE >40:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6B8 text2 CODE >42:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6BC text2 CODE >43:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6C0 text2 CODE >44:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6C4 text2 CODE >45:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6C8 text2 CODE >46:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6CC text2 CODE >47:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6D3 text2 CODE >49:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6D7 text2 CODE >50:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6DB text2 CODE >51:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6DF text2 CODE >52:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6E3 text2 CODE >53:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6E7 text2 CODE >54:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6EA text2 CODE >56:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6EE text2 CODE >57:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6F2 text2 CODE >58:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6F6 text2 CODE >59:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6FA text2 CODE >60:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+6FE text2 CODE >61:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+702 text2 CODE >64:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+706 text2 CODE >65:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+70A text2 CODE >66:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+70E text2 CODE >67:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+712 text2 CODE >68:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+716 text2 CODE >70:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+71A text2 CODE >72:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+71E text2 CODE >73:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+722 text2 CODE >74:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+726 text2 CODE >75:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+72A text2 CODE >76:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+72E text2 CODE >80:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+732 text2 CODE >81:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+736 text2 CODE >82:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+73A text2 CODE >83:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+73E text2 CODE >84:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+742 text2 CODE >86:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+746 text2 CODE >88:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+74A text2 CODE >89:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+74E text2 CODE >90:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+752 text2 CODE >91:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+756 text2 CODE >92:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+75A text2 CODE >96:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+75E text2 CODE >97:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+762 text2 CODE >98:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+766 text2 CODE >99:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+76A text2 CODE >100:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+76E text2 CODE >102:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+772 text2 CODE >104:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+776 text2 CODE >105:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+77A text2 CODE >106:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+77E text2 CODE >107:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+782 text2 CODE >108:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+786 text2 CODE >110:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+78D text2 CODE >113:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+791 text2 CODE >114:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+795 text2 CODE >115:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+799 text2 CODE >116:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+79D text2 CODE >117:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7A1 text2 CODE >119:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7A5 text2 CODE >121:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7A9 text2 CODE >122:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7AD text2 CODE >123:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7B1 text2 CODE >124:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7B5 text2 CODE >125:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7B9 text2 CODE >129:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7BD text2 CODE >130:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7C1 text2 CODE >131:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7C5 text2 CODE >132:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7C9 text2 CODE >133:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7CD text2 CODE >135:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7D1 text2 CODE >137:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7D5 text2 CODE >138:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7D9 text2 CODE >139:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7DD text2 CODE >140:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7E1 text2 CODE >141:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7E5 text2 CODE >143:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+7EC text2 CODE >144:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+644 text1 CODE >151:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+645 text1 CODE >152:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+64E text1 CODE >153:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+654 text1 CODE >154:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+656 text1 CODE >157:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+660 text1 CODE >159:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+665 text1 CODE >160:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+670 text1 CODE >162:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+674 text1 CODE >163:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+679 text1 CODE >164:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+67E text1 CODE >166:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+682 text1 CODE >168:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+686 text1 CODE >169:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+68B text1 CODE >170:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+690 text1 CODE >171:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\lcd_lib.c
+627 maintext CODE >8:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\main.c
+627 maintext CODE >11:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\main.c
+62A maintext CODE >16:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\main.c
+62D maintext CODE >17:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\main.c
+62F maintext CODE >19:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\main.c
+632 maintext CODE >20:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\main.c
+634 maintext CODE >21:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\main.c
+635 maintext CODE >22:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\main.c
+636 maintext CODE >26:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\main.c
+639 maintext CODE >27:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\main.c
+63C maintext CODE >28:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\main.c
+641 maintext CODE >31:C:\Users\eigo\MPLABXProjects\I2C_LCD.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -504,115 +299,71 @@ FF text3 CODE >32:C:\Users\dexte\MPLABXProjects\I2C_LCD.X\lcd_lib.c
 %SYMTAB
 ___latbits 1 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 __LdataBANK0 0 0 ABS 0 dataBANK0 -
-__Hspace_0 3E0 0 ABS 0 - -
-__Hspace_1 7C 0 ABS 0 - -
+__Hspace_0 800 0 ABS 0 - -
+__Hspace_1 7D 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10010 0 ABS 0 - -
 __size_of_lcd_cmd 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_lcd_str 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 __HidataBANK0 0 0 ABS 0 idataBANK0 -
-__size_of_I2C2_MasterSendTxData 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_DO_ADDRESS_NACK 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-_I2C2_DO_SEND_RESTART_WRITE 74C 0 CODE 0 text27 dist/default/production\I2C_LCD.X.production.o
-_I2C2_DO_SEND_ADR_WRITE 69E 0 CODE 0 text32 dist/default/production\I2C_LCD.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_WDT_Initialize 77C 0 CODE 0 text11 dist/default/production\I2C_LCD.X.production.o
-I2C2_MasterSendTxData@data 70 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
+_i2c_stop B90 0 CODE 0 text6 dist/default/production\I2C_LCD.X.production.o
+_i2c_wait BD8 0 CODE 0 text8 dist/default/production\I2C_LCD.X.production.o
+lcd_set_cursor@row_offsets 75 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
+__end_of_WDT_Initialize B7A 0 CODE 0 text10 dist/default/production\I2C_LCD.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _LATA 10C 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 _LATB 10D 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-_WPUA 20C 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 _WPUB 20D 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\dexte\AppData\Local\Temp\sc9c.o
-_main 3F8 0 CODE 0 maintext dist/default/production\I2C_LCD.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\eigo\AppData\Local\Temp\s6v4.o
+_main C4E 0 CODE 0 maintext dist/default/production\I2C_LCD.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-start 4E 0 CODE 0 init C:\Users\dexte\AppData\Local\Temp\sc9c.o
-_I2C2_DO_RX 138 0 CODE 0 text30 dist/default/production\I2C_LCD.X.production.o
-_I2C2_DO_TX 8E 0 CODE 0 text31 dist/default/production\I2C_LCD.X.production.o
+start 4 0 CODE 0 init C:\Users\eigo\AppData\Local\Temp\s6v4.o
+__end_of_i2c_stop B9E 0 CODE 0 text6 dist/default/production\I2C_LCD.X.production.o
+__end_of_i2c_wait BF0 0 CODE 0 text8 dist/default/production\I2C_LCD.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-I2C2_SetBuffer@bufferSize 70 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_DO_ADDRESS_NACK 3A2 0 CODE 0 text20 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_MasterSendAck 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__HbssCOMMON 0 0 ABS 0 bssCOMMON -
-__end_of_I2C2_Initialize 67C 0 CODE 0 text14 dist/default/production\I2C_LCD.X.production.o
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
-__end_of_wr2RegCompleteHandler 5E6 0 CODE 0 text49 dist/default/production\I2C_LCD.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-I2C2_SetDataCompleteCallback@cb 75 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_lcd_clear 710 0 CODE 0 text4 dist/default/production\I2C_LCD.X.production.o
-rd1RegCompleteHandler@ptr 79 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
-__size_of_rd1RegCompleteHandler 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-_MSSP2_InterruptHandler 7A 0 COMMON 1 bssCOMMON dist/default/production\I2C_LCD.X.production.o
-__size_of_lcd_clear 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\dexte\AppData\Local\Temp\sc9c.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\dexte\AppData\Local\Temp\sc9c.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\dexte\AppData\Local\Temp\sc9c.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\dexte\AppData\Local\Temp\sc9c.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\dexte\AppData\Local\Temp\sc9c.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\dexte\AppData\Local\Temp\sc9c.o
-_I2C2_DO_RX_ACK 72E 0 CODE 0 text24 dist/default/production\I2C_LCD.X.production.o
-__LbssCOMMON 0 0 ABS 0 bssCOMMON -
-_I2C2_SetCallback 444 0 CODE 0 text51 dist/default/production\I2C_LCD.X.production.o
+__size_of_lcd_backlight 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\eigo\AppData\Local\Temp\s6v4.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\eigo\AppData\Local\Temp\s6v4.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\eigo\AppData\Local\Temp\s6v4.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\eigo\AppData\Local\Temp\s6v4.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\eigo\AppData\Local\Temp\s6v4.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\eigo\AppData\Local\Temp\s6v4.o
 wtemp0 7E 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
-_wr2RegCompleteHandler 5C4 0 CODE 0 text49 dist/default/production\I2C_LCD.X.production.o
-_I2C2_MasterFsm 3A2 0 CODE 0 text18 dist/default/production\I2C_LCD.X.production.o
-_I2C2_MasterIsr 77C 0 CODE 0 text17 dist/default/production\I2C_LCD.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-_lcd_clear 706 0 CODE 0 text4 dist/default/production\I2C_LCD.X.production.o
-_rdBlkRegCompleteHandler 500 0 CODE 0 text43 dist/default/production\I2C_LCD.X.production.o
 _ANSELA 18C 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 _ANSELB 18D 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_DO_RX 1C4 0 CODE 0 text30 dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_DO_TX 138 0 CODE 0 text31 dist/default/production\I2C_LCD.X.production.o
-_I2C2_DO_RX_NACK_STOP 724 0 CODE 0 text23 dist/default/production\I2C_LCD.X.production.o
-__end_of_lcd_cmd 34A 0 CODE 0 text5 dist/default/production\I2C_LCD.X.production.o
-__end_of_lcd_str 500 0 CODE 0 text1 dist/default/production\I2C_LCD.X.production.o
-_I2C2_Initialize 66A 0 CODE 0 text14 dist/default/production\I2C_LCD.X.production.o
+lcd_set_cursor@cmd 7A 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
+lcd_set_cursor@col 79 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
+lcd_set_cursor@row 72 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
+__end_of_lcd_cmd C4E 0 CODE 0 text4 dist/default/production\I2C_LCD.X.production.o
+lcd_set_cursor@F2499 20 0 BANK0 1 dataBANK0 dist/default/production\I2C_LCD.X.production.o
 _BORCON 116 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_rdBlkRegCompleteHandler 530 0 CODE 0 text43 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_MasterStartRx 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_INTERRUPT_InterruptManager 4E 0 CODE 0 intentry dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_DO_SEND_ADR_READ 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-main@msg 45 0 BANK0 1 cstackBANK0 dist/default/production\I2C_LCD.X.production.o
-lcd_data@data 41 0 BANK0 1 cstackBANK0 dist/default/production\I2C_LCD.X.production.o
+__end_of_lcd_backlight BB0 0 CODE 0 text3 dist/default/production\I2C_LCD.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-__size_of_I2C2_MasterGetRxData 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_DO_RX_ACK 738 0 CODE 0 text24 dist/default/production\I2C_LCD.X.production.o
-_I2C2_DO_TX_EMPTY 23A 0 CODE 0 text35 dist/default/production\I2C_LCD.X.production.o
-___stackhi 216F 0 ABS 0 - C:\Users\dexte\AppData\Local\Temp\sc9c.o
-___stacklo 2031 0 ABS 0 - C:\Users\dexte\AppData\Local\Temp\sc9c.o
-__end_of_I2C2_MasterFsm 3F8 0 CODE 0 text18 dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_MasterIsr 784 0 CODE 0 text17 dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_MasterGetRxData 7A6 0 CODE 0 text40 dist/default/production\I2C_LCD.X.production.o
-_PIN_MANAGER_Initialize 530 0 CODE 0 text12 dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_SetCallback 490 0 CODE 0 text51 dist/default/production\I2C_LCD.X.production.o
-_I2C2_Status 20 0 BANK0 1 bssBANK0 dist/default/production\I2C_LCD.X.production.o
-_I2C2_CallbackReturnStop 7BC 0 CODE 0 text48 dist/default/production\I2C_LCD.X.production.o
+__end_of_i2c_start BD8 0 CODE 0 text7 dist/default/production\I2C_LCD.X.production.o
+__end_of_i2c_write C2E 0 CODE 0 text5 dist/default/production\I2C_LCD.X.production.o
+__size_of_i2c_start 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
+__size_of_i2c_write 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
+lcd_set_cursor@highnib 7B 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
+___stackhi 216F 0 ABS 0 - C:\Users\eigo\AppData\Local\Temp\s6v4.o
+___stacklo 2004 0 ABS 0 - C:\Users\eigo\AppData\Local\Temp\s6v4.o
+_i2c_start BC4 0 CODE 0 text7 dist/default/production\I2C_LCD.X.production.o
+_i2c_write C0E 0 CODE 0 text5 dist/default/production\I2C_LCD.X.production.o
+_PIN_MANAGER_Initialize BF0 0 CODE 0 text11 dist/default/production\I2C_LCD.X.production.o
 _SSP2CON1bits 21D 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-start_initialization 52 0 CODE 0 cinit dist/default/production\I2C_LCD.X.production.o
+start_initialization FDA 0 CODE 0 cinit dist/default/production\I2C_LCD.X.production.o
 _SSP2CON2bits 21E 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 _OSCCON 99 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_CallbackReturnStop 7C0 0 CODE 0 text48 dist/default/production\I2C_LCD.X.production.o
-_TRISBbits 8D 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_DO_SEND_ADR_WRITE 6AE 0 CODE 0 text32 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_SetCallback 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_DO_SEND_RESTART 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-rdBlkRegCompleteHandler@ptr 79 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
-__end_of_SYSTEM_Initialize 620 0 CODE 0 text10 dist/default/production\I2C_LCD.X.production.o
-__end_of_rd2RegCompleteHandler 5A2 0 CODE 0 text45 dist/default/production\I2C_LCD.X.production.o
-clear_ram0 6D6 0 CODE 0 clrtext dist/default/production\I2C_LCD.X.production.o
-__pcstackBANK0 3D 0 BANK0 1 cstackBANK0 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_MasterIsNack 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_DO_SEND_RESTART_READ 760 0 CODE 0 text28 dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_DO_SEND_RESTART 74C 0 CODE 0 text26 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_Initialize 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
+__end_of_SYSTEM_Initialize BC4 0 CODE 0 text9 dist/default/production\I2C_LCD.X.production.o
+__size_of_lcd_set_cursor 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 _WDTCON 97 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\dexte\AppData\Local\Temp\sc9c.o
-_rd2RegCompleteHandler 580 0 CODE 0 text45 dist/default/production\I2C_LCD.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\eigo\AppData\Local\Temp\s6v4.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -623,7 +374,7 @@ __Hbank6 0 0 BANK6 1 bank6 -
 __Hbank7 0 0 BANK7 1 bank7 -
 __Hbank8 0 0 BANK8 1 bank8 -
 __Hbank9 0 0 BANK9 1 bank9 -
-__Hcinit 8E 0 CODE 0 cinit -
+__Hcinit 1000 0 CODE 0 cinit -
 __size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 __Hsfr10 0 0 ABS 0 sfr10 -
 __Hsfr11 0 0 ABS 0 sfr11 -
@@ -647,7 +398,6 @@ __Hsfr28 0 0 ABS 0 sfr28 -
 __Hsfr29 0 0 ABS 0 sfr29 -
 __Hsfr30 0 0 ABS 0 sfr30 -
 __Hsfr31 0 0 ABS 0 sfr31 -
-__end_of_wr1RegCompleteHandler 580 0 CODE 0 text44 dist/default/production\I2C_LCD.X.production.o
 __Hstack 0 0 STACK 2 stack -
 __Hbank10 0 0 BANK10 1 bank10 -
 __Hbank11 0 0 BANK11 1 bank11 -
@@ -673,14 +423,9 @@ __Hbank30 0 0 BANK30 1 bank30 -
 __Hbank31 0 0 BANK31 1 bank31 -
 __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
-_I2C2_CallbackReturnReset 7B8 0 CODE 0 text47 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_MasterSendNack 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_lcd_data 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 __size_of_lcd_init 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_MasterStop 7B2 0 CODE 0 text53 dist/default/production\I2C_LCD.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10012 0 CONFIG 4 config -
-_I2C2_SetBuffer 5E6 0 CODE 0 text52 dist/default/production\I2C_LCD.X.production.o
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
@@ -691,7 +436,7 @@ __Lbank6 0 0 BANK6 1 bank6 -
 __Lbank7 0 0 BANK7 1 bank7 -
 __Lbank8 0 0 BANK8 1 bank8 -
 __Lbank9 0 0 BANK9 1 bank9 -
-__Lcinit 52 0 CODE 0 cinit -
+__Lcinit FDA 0 CODE 0 cinit -
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
 __Lsfr12 0 0 ABS 0 sfr12 -
@@ -715,15 +460,11 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-__end_of_I2C2_DO_TX_EMPTY 298 0 CODE 0 text35 dist/default/production\I2C_LCD.X.production.o
 _APFCON0 11D 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 _APFCON1 11E 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_MasterSetIrq 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-_wr1RegCompleteHandler 55E 0 CODE 0 text44 dist/default/production\I2C_LCD.X.production.o
-_INTCONbits B 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
-__Hinit 4E 0 CODE 0 init -
+__Hinit 4 0 CODE 0 init -
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Hsfr1 0 0 ABS 0 sfr1 -
 __Hsfr2 0 0 ABS 0 sfr2 -
@@ -737,7 +478,7 @@ __Hsfr9 0 0 ABS 0 sfr9 -
 __Htext 0 0 ABS 0 text -
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
-__Linit 4E 0 CODE 0 init -
+__Linit 4 0 CODE 0 init -
 __Lsfr0 0 0 ABS 0 sfr0 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
@@ -749,106 +490,27 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
-__pstringtext1 490 0 STRCODE 0 stringtext1 dist/default/production\I2C_LCD.X.production.o
 _SSP2CON1 21D 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 _SSP2CON2 21E 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 _SSP2STAT 21C 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-_I2C2_SetDataCompleteCallback 620 0 CODE 0 text50 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_DO_TX_EMPTY 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _SSP2STATbits 21C 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-int$flags 7E 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__size_of_INTERRUPT_InterruptManager 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 __size_of_WDT_Initialize 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__S0 3E0 0 ABS 0 - -
-__S1 7C 0 ABS 0 - -
+__S0 800 0 ABS 0 - -
+__S1 7D 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_I2C2_DO_RX_NACK_RESTART 71A 0 CODE 0 text22 dist/default/production\I2C_LCD.X.production.o
-_I2C2_DO_ADDRESS_NACK 34A 0 CODE 0 text20 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_DO_RX 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_DO_TX 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_DO_RX_NACK_RESTART 724 0 CODE 0 text22 dist/default/production\I2C_LCD.X.production.o
-__end_of_i2c2_fsmStateTable 4D0 0 STRCODE 0 stringtext1 dist/default/production\I2C_LCD.X.production.o
-_I2C2_MasterEnableRestart 7B2 0 CODE 0 text54 dist/default/production\I2C_LCD.X.production.o
-_I2C_Master_Start 6EE 0 CODE 0 text8 dist/default/production\I2C_LCD.X.production.o
-_I2C_Master_Write 68E 0 CODE 0 text6 dist/default/production\I2C_LCD.X.production.o
-_I2C2_MasterSendNack 78C 0 CODE 0 text41 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_DO_SEND_STOP 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-_SYSTEM_Initialize 606 0 CODE 0 text10 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_DO_SEND_RESTART_READ 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-_I2C2_MasterStop 7AC 0 CODE 0 text53 dist/default/production\I2C_LCD.X.production.o
-_I2C2_DO_RESET 710 0 CODE 0 text21 dist/default/production\I2C_LCD.X.production.o
-_lcd_data 298 0 CODE 0 text2 dist/default/production\I2C_LCD.X.production.o
-_lcd_init 1C4 0 CODE 0 text3 dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_MasterSendTxData 774 0 CODE 0 text38 dist/default/production\I2C_LCD.X.production.o
-__Lintentry 8 0 CODE 0 intentry -
-__end_of_I2C2_SetBuffer 606 0 CODE 0 text52 dist/default/production\I2C_LCD.X.production.o
-I2C_Master_Write@data 3D 0 BANK0 1 cstackBANK0 dist/default/production\I2C_LCD.X.production.o
-_I2C2_DO_IDLE 760 0 CODE 0 text34 dist/default/production\I2C_LCD.X.production.o
-_I2C2_DO_RCEN 6BC 0 CODE 0 text29 dist/default/production\I2C_LCD.X.production.o
-_lcd_cmd 2F2 0 CODE 0 text5 dist/default/production\I2C_LCD.X.production.o
-_lcd_str 4D0 0 CODE 0 text1 dist/default/production\I2C_LCD.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\dexte\AppData\Local\Temp\sc9c.o
-__size_of_wr2RegCompleteHandler 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__pdataBANK0 4B 0 BANK0 1 dataBANK0 dist/default/production\I2C_LCD.X.production.o
-__end_of_lcd_data 2F2 0 CODE 0 text2 dist/default/production\I2C_LCD.X.production.o
-__LbssBANK0 0 0 ABS 0 bssBANK0 -
-__end_of_lcd_init 23A 0 CODE 0 text3 dist/default/production\I2C_LCD.X.production.o
-__Lstringtext1 0 0 ABS 0 stringtext1 -
-wr2RegCompleteHandler@ptr 79 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
-_INTERRUPT_InterruptManager 8 0 CODE 0 intentry dist/default/production\I2C_LCD.X.production.o
-lcd_str@ptr 43 0 BANK0 1 cstackBANK0 dist/default/production\I2C_LCD.X.production.o
-_PIE4bits 94 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_MasterIsNack 706 0 CODE 0 text37 dist/default/production\I2C_LCD.X.production.o
-_i2c2_fsmStateTable 490 0 STRCODE 0 stringtext1 dist/default/production\I2C_LCD.X.production.o
-_I2C2_MasterSendTxData 76A 0 CODE 0 text38 dist/default/production\I2C_LCD.X.production.o
-__ptext10 606 0 CODE 0 text10 dist/default/production\I2C_LCD.X.production.o
-__ptext11 774 0 CODE 0 text11 dist/default/production\I2C_LCD.X.production.o
-__ptext12 530 0 CODE 0 text12 dist/default/production\I2C_LCD.X.production.o
-__ptext13 6AE 0 CODE 0 text13 dist/default/production\I2C_LCD.X.production.o
-__ptext14 66A 0 CODE 0 text14 dist/default/production\I2C_LCD.X.production.o
-__ptext15 652 0 CODE 0 text15 dist/default/production\I2C_LCD.X.production.o
-__ptext17 77C 0 CODE 0 text17 dist/default/production\I2C_LCD.X.production.o
-__ptext18 3A2 0 CODE 0 text18 dist/default/production\I2C_LCD.X.production.o
-__ptext19 794 0 CODE 0 text19 dist/default/production\I2C_LCD.X.production.o
-__ptext20 34A 0 CODE 0 text20 dist/default/production\I2C_LCD.X.production.o
-__ptext21 710 0 CODE 0 text21 dist/default/production\I2C_LCD.X.production.o
-__ptext22 71A 0 CODE 0 text22 dist/default/production\I2C_LCD.X.production.o
-__ptext23 724 0 CODE 0 text23 dist/default/production\I2C_LCD.X.production.o
-__ptext24 72E 0 CODE 0 text24 dist/default/production\I2C_LCD.X.production.o
-__ptext25 738 0 CODE 0 text25 dist/default/production\I2C_LCD.X.production.o
-__ptext26 742 0 CODE 0 text26 dist/default/production\I2C_LCD.X.production.o
-__ptext27 74C 0 CODE 0 text27 dist/default/production\I2C_LCD.X.production.o
-__ptext28 756 0 CODE 0 text28 dist/default/production\I2C_LCD.X.production.o
-__ptext29 6BC 0 CODE 0 text29 dist/default/production\I2C_LCD.X.production.o
-__ptext30 138 0 CODE 0 text30 dist/default/production\I2C_LCD.X.production.o
-__ptext31 8E 0 CODE 0 text31 dist/default/production\I2C_LCD.X.production.o
-__ptext32 69E 0 CODE 0 text32 dist/default/production\I2C_LCD.X.production.o
-__ptext33 67C 0 CODE 0 text33 dist/default/production\I2C_LCD.X.production.o
-__ptext34 760 0 CODE 0 text34 dist/default/production\I2C_LCD.X.production.o
-__ptext35 23A 0 CODE 0 text35 dist/default/production\I2C_LCD.X.production.o
-__ptext36 79A 0 CODE 0 text36 dist/default/production\I2C_LCD.X.production.o
-__ptext37 6FA 0 CODE 0 text37 dist/default/production\I2C_LCD.X.production.o
-__ptext38 76A 0 CODE 0 text38 dist/default/production\I2C_LCD.X.production.o
-__ptext39 784 0 CODE 0 text39 dist/default/production\I2C_LCD.X.production.o
-__ptext40 7A0 0 CODE 0 text40 dist/default/production\I2C_LCD.X.production.o
-__ptext41 78C 0 CODE 0 text41 dist/default/production\I2C_LCD.X.production.o
-__ptext42 7A6 0 CODE 0 text42 dist/default/production\I2C_LCD.X.production.o
-__ptext43 500 0 CODE 0 text43 dist/default/production\I2C_LCD.X.production.o
-__ptext44 55E 0 CODE 0 text44 dist/default/production\I2C_LCD.X.production.o
-__ptext45 580 0 CODE 0 text45 dist/default/production\I2C_LCD.X.production.o
-__ptext46 5A2 0 CODE 0 text46 dist/default/production\I2C_LCD.X.production.o
-__ptext47 7B8 0 CODE 0 text47 dist/default/production\I2C_LCD.X.production.o
-__ptext48 7BC 0 CODE 0 text48 dist/default/production\I2C_LCD.X.production.o
-__ptext49 5C4 0 CODE 0 text49 dist/default/production\I2C_LCD.X.production.o
-__ptext50 620 0 CODE 0 text50 dist/default/production\I2C_LCD.X.production.o
-__ptext51 444 0 CODE 0 text51 dist/default/production\I2C_LCD.X.production.o
-__ptext52 5E6 0 CODE 0 text52 dist/default/production\I2C_LCD.X.production.o
-__ptext53 7AC 0 CODE 0 text53 dist/default/production\I2C_LCD.X.production.o
-__ptext54 7B2 0 CODE 0 text54 dist/default/production\I2C_LCD.X.production.o
-__end_of_PIN_MANAGER_Initialize 55E 0 CODE 0 text12 dist/default/production\I2C_LCD.X.production.o
+_SYSTEM_Initialize BB0 0 CODE 0 text9 dist/default/production\I2C_LCD.X.production.o
+_lcd_init D22 0 CODE 0 text2 dist/default/production\I2C_LCD.X.production.o
+__Lintentry 4 0 CODE 0 intentry -
+_lcd_cmd C2E 0 CODE 0 text4 dist/default/production\I2C_LCD.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\eigo\AppData\Local\Temp\s6v4.o
+__pdataBANK0 20 0 BANK0 1 dataBANK0 dist/default/production\I2C_LCD.X.production.o
+__end_of_lcd_init FDA 0 CODE 0 text2 dist/default/production\I2C_LCD.X.production.o
+__ptext10 B72 0 CODE 0 text10 dist/default/production\I2C_LCD.X.production.o
+__ptext11 BF0 0 CODE 0 text11 dist/default/production\I2C_LCD.X.production.o
+__ptext12 B82 0 CODE 0 text12 dist/default/production\I2C_LCD.X.production.o
+__end_of_PIN_MANAGER_Initialize C0E 0 CODE 0 text11 dist/default/production\I2C_LCD.X.production.o
 __Lbank10 0 0 BANK10 1 bank10 -
 __Lbank11 0 0 BANK11 1 bank11 -
 __Lbank12 0 0 BANK12 1 bank12 -
@@ -871,131 +533,60 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext 3F8 0 CODE 0 maintext dist/default/production\I2C_LCD.X.production.o
+__pmaintext C4E 0 CODE 0 maintext dist/default/production\I2C_LCD.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
-__end_of_I2C2_MasterSendAck 78C 0 CODE 0 text39 dist/default/production\I2C_LCD.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-main@F2898 4B 0 BANK0 1 dataBANK0 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_DO_SEND_ADR_WRITE 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_DO_SEND_RESTART_WRITE 756 0 CODE 0 text27 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_DO_IDLE 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_DO_RCEN 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_CallbackReturnReset 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_rd1RegCompleteHandler 5C4 0 CODE 0 text46 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_MasterClearIrq 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_DO_RX_ACK 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_rdBlkRegCompleteHandler 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_MasterSetIrq 7A0 0 CODE 0 text36 dist/default/production\I2C_LCD.X.production.o
 _OSCTUNE 98 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C_Master_Init 66A 0 CODE 0 text15 dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C_Master_Stop 6EE 0 CODE 0 text7 dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C_Master_Wait 652 0 CODE 0 text9 dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C_Master_Start 6FA 0 CODE 0 text8 dist/default/production\I2C_LCD.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__end_of_I2C_Master_Write 69E 0 CODE 0 text6 dist/default/production\I2C_LCD.X.production.o
-__pbssCOMMON 7A 0 COMMON 1 bssCOMMON dist/default/production\I2C_LCD.X.production.o
-lcd_cmd@cmd 41 0 BANK0 1 cstackBANK0 dist/default/production\I2C_LCD.X.production.o
-__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
-_I2C2_MasterSendAck 784 0 CODE 0 text39 dist/default/production\I2C_LCD.X.production.o
-_rd1RegCompleteHandler 5A2 0 CODE 0 text46 dist/default/production\I2C_LCD.X.production.o
-_PIR4bits 14 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__Lend_init 4E 0 CODE 0 end_init -
-__size_of_I2C2_MasterFsm 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_MasterIsr 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
+lcd_cmd@cmd 71 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
+__Lend_init 4 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__end_of_I2C2_DO_IDLE 76A 0 CODE 0 text34 dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_DO_RCEN 6CA 0 CODE 0 text29 dist/default/production\I2C_LCD.X.production.o
-_I2C2_MasterGetRxData 7A0 0 CODE 0 text40 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C_Master_Start 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_DO_RX_NACK_STOP 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C_Master_Write 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-end_of_initialization 86 0 CODE 0 cinit dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_MasterSendNack 794 0 CODE 0 text41 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_MasterStop 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__Hintentry 4E 0 CODE 0 intentry -
+end_of_initialization FFA 0 CODE 0 cinit dist/default/production\I2C_LCD.X.production.o
+__Hintentry 4 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
-__size_of_I2C2_DO_RESET 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_MasterEnableRestart 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
+i2c_write@data 70 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec -
-_I2C2_DO_SEND_RESTART_READ 756 0 CODE 0 text28 dist/default/production\I2C_LCD.X.production.o
-__HbssBANK0 0 0 ABS 0 bssBANK0 -
-__end_of_I2C2_DO_SEND_STOP 742 0 CODE 0 text25 dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_MasterStartRx 7AC 0 CODE 0 text42 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_SetDataCompleteCallback 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_DO_SEND_ADR_READ 68E 0 CODE 0 text33 dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_DO_RX_NACK_STOP 72E 0 CODE 0 text23 dist/default/production\I2C_LCD.X.production.o
-__ptext1 4D0 0 CODE 0 text1 dist/default/production\I2C_LCD.X.production.o
-__ptext2 298 0 CODE 0 text2 dist/default/production\I2C_LCD.X.production.o
-__ptext3 1C4 0 CODE 0 text3 dist/default/production\I2C_LCD.X.production.o
-__ptext4 706 0 CODE 0 text4 dist/default/production\I2C_LCD.X.production.o
-__ptext5 2F2 0 CODE 0 text5 dist/default/production\I2C_LCD.X.production.o
-__ptext6 68E 0 CODE 0 text6 dist/default/production\I2C_LCD.X.production.o
-__ptext7 6E2 0 CODE 0 text7 dist/default/production\I2C_LCD.X.production.o
-__ptext8 6EE 0 CODE 0 text8 dist/default/production\I2C_LCD.X.production.o
-__ptext9 63A 0 CODE 0 text9 dist/default/production\I2C_LCD.X.production.o
-_I2C2_MasterIsNack 6FA 0 CODE 0 text37 dist/default/production\I2C_LCD.X.production.o
-I2C2_SetBuffer@buffer 73 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_SetDataCompleteCallback 63A 0 CODE 0 text50 dist/default/production\I2C_LCD.X.production.o
-_I2C2_MasterClearIrq 794 0 CODE 0 text19 dist/default/production\I2C_LCD.X.production.o
+__ptext1 C88 0 CODE 0 text1 dist/default/production\I2C_LCD.X.production.o
+__ptext2 D22 0 CODE 0 text2 dist/default/production\I2C_LCD.X.production.o
+__ptext3 B9E 0 CODE 0 text3 dist/default/production\I2C_LCD.X.production.o
+__ptext4 C2E 0 CODE 0 text4 dist/default/production\I2C_LCD.X.production.o
+__ptext5 C0E 0 CODE 0 text5 dist/default/production\I2C_LCD.X.production.o
+__ptext6 B90 0 CODE 0 text6 dist/default/production\I2C_LCD.X.production.o
+__ptext7 BC4 0 CODE 0 text7 dist/default/production\I2C_LCD.X.production.o
+__ptext8 BD8 0 CODE 0 text8 dist/default/production\I2C_LCD.X.production.o
+__ptext9 BB0 0 CODE 0 text9 dist/default/production\I2C_LCD.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-_I2C_Master_Init 652 0 CODE 0 text15 dist/default/production\I2C_LCD.X.production.o
-_I2C_Master_Stop 6E2 0 CODE 0 text7 dist/default/production\I2C_LCD.X.production.o
-_I2C_Master_Wait 63A 0 CODE 0 text9 dist/default/production\I2C_LCD.X.production.o
-wr1RegCompleteHandler@ptr 79 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_CallbackReturnStop 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-_I2C2_DO_SEND_RESTART 742 0 CODE 0 text26 dist/default/production\I2C_LCD.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__size_of_rd2RegCompleteHandler 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-_I2C2_DO_SEND_ADR_READ 67C 0 CODE 0 text33 dist/default/production\I2C_LCD.X.production.o
-__Hstringtext1 0 0 ABS 0 stringtext1 -
-__end_of_I2C2_DO_RESET 71A 0 CODE 0 text21 dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_CallbackReturnReset 7BC 0 CODE 0 text47 dist/default/production\I2C_LCD.X.production.o
-__end_of__initialization 86 0 CODE 0 cinit dist/default/production\I2C_LCD.X.production.o
+_lcd_set_cursor C88 0 CODE 0 text1 dist/default/production\I2C_LCD.X.production.o
+__end_of__initialization FFA 0 CODE 0 cinit dist/default/production\I2C_LCD.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-_I2C2_MasterStartRx 7A6 0 CODE 0 text42 dist/default/production\I2C_LCD.X.production.o
-__pidataBANK0 6CA 0 CODE 0 idataBANK0 dist/default/production\I2C_LCD.X.production.o
+__pidataBANK0 B7A 0 CODE 0 idataBANK0 dist/default/production\I2C_LCD.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
-_I2C2_MasterSetIrq 79A 0 CODE 0 text36 dist/default/production\I2C_LCD.X.production.o
-__size_of_wr1RegCompleteHandler 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-I2C2_SetCallback@cb 70 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
-I2C2_SetDataCompleteCallback@ptr 77 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
 _SSP2ADD 21A 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 _SSP2BUF 219 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-_SSPCON2 216 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-_SSPSTAT 214 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__Hend_init 52 0 CODE 0 end_init -
-__end_of_main 444 0 CODE 0 maintext dist/default/production\I2C_LCD.X.production.o
-rd2RegCompleteHandler@ptr 79 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
+__Hend_init 8 0 CODE 0 end_init -
+__end_of_main C88 0 CODE 0 maintext dist/default/production\I2C_LCD.X.production.o
+__size_of_i2c_stop 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
+__size_of_i2c_wait 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 _TRISA 8C 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-_TRISB 8D 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-__size_of_I2C2_DO_SEND_RESTART_WRITE 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_MasterEnableRestart 7B8 0 CODE 0 text54 dist/default/production\I2C_LCD.X.production.o
+_lcd_backlight B9E 0 CODE 0 text3 dist/default/production\I2C_LCD.X.production.o
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-_WDT_Initialize 774 0 CODE 0 text11 dist/default/production\I2C_LCD.X.production.o
-__pintentry 8 0 CODE 0 intentry dist/default/production\I2C_LCD.X.production.o
-I2C2_SetCallback@idx 74 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
-I2C2_SetCallback@ptr 72 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
+_WDT_Initialize B72 0 CODE 0 text10 dist/default/production\I2C_LCD.X.production.o
+__end_of_lcd_set_cursor D22 0 CODE 0 text1 dist/default/production\I2C_LCD.X.production.o
 __HdataBANK0 0 0 ABS 0 dataBANK0 -
-_I2C2_DO_SEND_STOP 738 0 CODE 0 text25 dist/default/production\I2C_LCD.X.production.o
-__end_of_OSCILLATOR_Initialize 6BC 0 CODE 0 text13 dist/default/production\I2C_LCD.X.production.o
-__initialization 52 0 CODE 0 cinit dist/default/production\I2C_LCD.X.production.o
-__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\I2C_LCD.X.production.o
-__end_of_I2C2_MasterClearIrq 79A 0 CODE 0 text19 dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_DO_RX_NACK_RESTART 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C2_SetBuffer 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C_Master_Init 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C_Master_Stop 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-__size_of_I2C_Master_Wait 0 0 ABS 0 - dist/default/production\I2C_LCD.X.production.o
-_OSCILLATOR_Initialize 6AE 0 CODE 0 text13 dist/default/production\I2C_LCD.X.production.o
+__end_of_OSCILLATOR_Initialize B90 0 CODE 0 text12 dist/default/production\I2C_LCD.X.production.o
+lcd_set_cursor@lownib 7C 0 COMMON 1 cstackCOMMON dist/default/production\I2C_LCD.X.production.o
+__initialization FDA 0 CODE 0 cinit dist/default/production\I2C_LCD.X.production.o
+_OSCILLATOR_Initialize B82 0 CODE 0 text12 dist/default/production\I2C_LCD.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -1021,12 +612,24 @@ _OSCILLATOR_Initialize 6AE 0 CODE 0 text13 dist/default/production\I2C_LCD.X.pro
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text1 0 268 4D0 178 2
-cstackCOMMON 1 70 70 C 1
-stringtext1 0 248 490 20 2
-intentry 0 4 8 244 2
-reset_vec 0 0 0 2 2
-bssBANK0 1 20 20 31 1
+cinit 0 7ED FDA 13 2
+text1 0 644 C88 4D 2
+text2 0 691 D22 15C 2
+text3 0 5CF B9E 9 2
+text4 0 617 C2E 10 2
+text5 0 607 C0E 10 2
+text6 0 5C8 B90 7 2
+text7 0 5E2 BC4 A 2
+text8 0 5EC BD8 C 2
+text9 0 5D8 BB0 A 2
+text10 0 5B9 B72 4 2
+text11 0 5F8 BF0 F 2
+text12 0 5C1 B82 7 2
+maintext 0 627 C4E 1D 2
+cstackCOMMON 1 70 70 D 1
+reset_vec 0 0 0 4 2
+idataBANK0 0 5BD B7A 4 2
+dataBANK0 1 20 20 4 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

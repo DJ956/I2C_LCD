@@ -6,51 +6,172 @@
  */
 
 #include <xc.h>
+#include "mcc_generated_files/device_config.h"
 
-#include "mcc_generated_files/mcc.h"
-#include "i2c_lib.h"
+#include "i2c.h"
 #include "lcd_lib.h"
 
-#define LCD_ADD 0x3F
+#define ROW 2
+#define COL 16
 
 void lcd_cmd(uint8_t cmd){
-    I2C_Master_Start();
-    I2C_Master_Write(LCD_ADD);
-    I2C_Master_Write(0x00);
-    I2C_Master_Write(cmd);
-    I2C_Master_Stop();
-    __delay_ms(10);
-}
-
-void lcd_init(){
-    __delay_ms(150);
-    lcd_cmd(0x38);
-    lcd_cmd(0x39);
-    lcd_cmd(0x14);
-    lcd_cmd(0x7f);
-    
-    lcd_cmd(0x6A);
-    __delay_ms(300);
-    lcd_cmd(0x38);
-    lcd_cmd(0x0C);
-    lcd_cmd(0x01);    
-}
-
-void lcd_clear(){
-    lcd_cmd(0x01);
+    i2c_start();
+    i2c_write(LCD_ADD);  
+    i2c_write(cmd);
+    i2c_stop();    
 }
 
 void lcd_data(uint8_t data){
-    I2C_Master_Start();
-    I2C_Master_Write(LCD_ADD);
-    I2C_Master_Write(0x40);
-    I2C_Master_Write(data);
-    I2C_Master_Stop();
-    __delay_ms(10);
+    i2c_start();
+    i2c_write(LCD_ADD);
+    i2c_write(0x40);
+    i2c_write(data);
+    i2c_stop();    
 }
 
-void lcd_str(const uint8_t* ptr){
-    while(*ptr != 0){
-        lcd_data(*ptr++);
+void lcd_init(){
+    __delay_ms(400);
+    
+    lcd_cmd(0x30);        
+    __delay_us(10);
+    lcd_cmd(0x34);    
+    __delay_us(10);
+    lcd_cmd(0x30);    
+    __delay_ms(5);  //write4bits(0x03 << 4)
+    
+    lcd_cmd(0x30);    
+    __delay_us(10);
+    lcd_cmd(0x34);    
+    __delay_us(10);
+    lcd_cmd(0x30);
+    __delay_ms(5);  //write4bits(0x03 << 4)
+    
+    lcd_cmd(0x30);
+    __delay_us(10);    
+    lcd_cmd(0x34);
+    __delay_us(10);    
+    lcd_cmd(0x30);
+    __delay_us(300);  //write4bits(0x03 << 4)
+    
+    lcd_cmd(0x20);
+    __delay_us(10);
+    lcd_cmd(0x24);
+    __delay_us(10);
+    lcd_cmd(0x20);     
+    __delay_us(10); //write4bits(0x02 << 4)
+    
+    //command(0x28)
+    lcd_cmd(0x20);
+    __delay_us(10);
+    lcd_cmd(0x24);
+    __delay_us(10);
+    lcd_cmd(0x20);  //write4bits(0x20);
+    
+    __delay_us(100);
+    
+    lcd_cmd(0x80);
+    __delay_us(10);
+    lcd_cmd(0x84);
+    __delay_us(10);
+    lcd_cmd(0x80);  //write4bits(0x80)
+    
+    //display
+    //command(0x0C)
+    lcd_cmd(0x00);
+    __delay_us(10);
+    lcd_cmd(0x04);
+    __delay_us(10);
+    lcd_cmd(0x00);  //write4bits(0x00);
+    
+    __delay_us(100);
+    
+    lcd_cmd(0xC0);
+    __delay_us(10);
+    lcd_cmd(0xC4);
+    __delay_us(10);
+    lcd_cmd(0xC0);  //write4bits(0xC0);
+    
+    //clear
+    //command(0x01);
+    lcd_cmd(0x00);
+    __delay_us(10);
+    lcd_cmd(0x04);
+    __delay_us(10);
+    lcd_cmd(0x00);  //write4bits(0x00);
+    
+    __delay_us(100);
+    
+    lcd_cmd(0x10);
+    __delay_us(10);
+    lcd_cmd(0x14);
+    __delay_us(10);
+    lcd_cmd(0x10);  //write4bits(0x10);
+    
+    __delay_ms(5); //takes a long time
+    
+    //command(0x06);
+    lcd_cmd(0x00);
+    __delay_us(10);
+    lcd_cmd(0x04);
+    __delay_us(10);
+    lcd_cmd(0x00);  //write4bits(0x00);
+    
+    __delay_us(100);
+    
+    lcd_cmd(0x60);
+    __delay_us(10);
+    lcd_cmd(0x64);
+    __delay_us(10);
+    lcd_cmd(0x60);  //write4bits(0x60);
+    
+    //home()
+    //command(0x02)
+    lcd_cmd(0x00);
+    __delay_us(10);
+    lcd_cmd(0x04);
+    __delay_us(10);
+    lcd_cmd(0x00);  //write4bits(0x00);
+    
+    __delay_us(100);
+    
+    lcd_cmd(0x20);
+    __delay_us(10);
+    lcd_cmd(0x24);
+    __delay_us(10);
+    lcd_cmd(0x20);  //write4bits(0x20);
+    
+    __delay_ms(3);
+}
+
+void lcd_backlight(){
+    lcd_cmd(0x08);
+    __delay_us(10);
+}
+
+void lcd_set_cursor(uint8_t col, uint8_t row){
+    uint8_t row_offsets[] = {0x00, 0x40, 0x14, 0x54};
+    if(row > ROW){
+        row = ROW - 1;
     }
+    
+    uint8_t cmd = 0x88 | (col + row_offsets[row]);
+    //command()
+    uint8_t highnib = (cmd & 0xf8);
+	uint8_t lownib = ((cmd >> 4) & 0xf8);
+    
+	lcd_cmd(highnib);
+    lcd_cmd(highnib | En);
+    lcd_cmd(highnib & ~En);
+    
+    __delay_us(100);
+        
+	lcd_cmd(lownib);
+    lcd_cmd(lownib | En);
+    lcd_cmd(lownib & ~En);    
+}
+
+void lcd_print(char *str) {
+    while (*str) {
+        lcd_data(*str++);
+    }    
 }

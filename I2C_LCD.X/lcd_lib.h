@@ -2,7 +2,7 @@
  * File:   lcd_lib.h
  * Author: dexte
  *
- * Created on October 4, 2020, 3:24 PM
+ * Created on December 6, 2020, 9:58 PM
  */
 
 #ifndef LCD_LIB_H
@@ -12,14 +12,19 @@
 extern "C" {
 #endif
 
-void lcd_init();
-void lcd_cmd(uint8_t cmd);
-void lcd_data(uint8_t data);
-void lcd_clear();
-void lcd_str(const uint8_t* ptr);
+//#define LCD_ADD 0x3F
+#define LCD_ADD 0x7E
+//#define LCD_ADD 0x27
+#define En 0b00000100
 
-
-
+    void lcd_init();
+    void lcd_backlight();    
+    void lcd_cmd(uint8_t cmd);
+    void lcd_data(uint8_t data);
+    void lcd_clear();
+    void lcd_set_cursor(uint8_t col, uint8_t row);
+    void lcd_print();
+    
 #ifdef	__cplusplus
 }
 #endif

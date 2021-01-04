@@ -1,29 +1,34 @@
 
 #include "mcc_generated_files/mcc.h"
-#include "i2c_lib.h"
+
+#include "i2c.h"
 #include "lcd_lib.h"
 
-/*
-                         Main application
- */
+
 void main(void)
 {
     // initialize the device
-    SYSTEM_Initialize();
+    SYSTEM_Initialize(); 
     
-    I2C_Master_Init();    
+    //ANSELB = 0x00;    
+    //TRISB = 0x24;
+     
+    WPUB = 0x24;
+    OPTION_REGbits.nWPUEN = 0;
     
-    uint8_t msg[] = "hello";
+    SSP2ADD = 0x13;    
+    SSP2CON1 = 0x28;
+    SSP2CON2 = 0x0;
+    SSP2STAT = 0;
+
+    //__delay_ms(500);
     
     lcd_init();
-    lcd_clear();
-    lcd_cmd(0x02);
-    lcd_str(msg);
+    lcd_backlight();
+    lcd_set_cursor(0, 0);
     
-    while (1)
-    {
-        
-    }
+    //lcd_print("hello");
+    while(1){}
 }
 /**
  End of File
