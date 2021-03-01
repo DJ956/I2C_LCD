@@ -117,7 +117,12 @@ void lcd_backlight(){
 }
 
 void lcd_clear(){
-    command(0x01, 0);
+    for(uint8_t row = 0; row < ROW; row++){
+        for(uint8_t col = 0; col < COL; col++){
+            lcd_set_cursor(col, row);
+            lcd_print(" ");
+        }
+    }
 }
 
 void lcd_set_cursor(uint8_t col, uint8_t row){

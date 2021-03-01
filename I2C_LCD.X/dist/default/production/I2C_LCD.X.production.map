@@ -1,11 +1,11 @@
-Microchip MPLAB XC8 Compiler V2.31
+Microchip MPLAB XC8 Compiler V2.32
 
 Linker command line:
 
--W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
+-W-3 --edf=C:\Program Files\Microchip\xc8\v2.32\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\I2C_LCD.X.production.sym \
   --cmf=dist/default/production\I2C_LCD.X.production.cmf -z -Q16F1827 \
-  -oC:\Users\eigo\AppData\Local\Temp\s7bk.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\dexte\AppData\Local\Temp\xcAs42o.4 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/I2C_LCD.X.production.map -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ASTACK=0200Bh-0216Fh -pstack=STACK -ACODE=00h-07FFhx2 \
   -ASTRCODE=00h-0FFFh -ASTRING=00h-0FFhx16 -ACONST=00h-0FFhx16 \
@@ -28,7 +28,8 @@ Linker command line:
   -AIDLOC=08000h-08003h -DIDLOC=2 -AEEDATA=00h-0FFh/0F000h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry,init,end_init -ppowerup=CODE \
-  -pcinit=CODE -pfunctab=ENTRY -k C:\Users\eigo\AppData\Local\Temp\s7bk.o \
+  -pcinit=CODE -pfunctab=ENTRY -k \
+  C:\Users\dexte\AppData\Local\Temp\xcAs42o.o \
   dist/default/production\I2C_LCD.X.production.o 
 
 Object code version is 3.11
@@ -38,7 +39,7 @@ Machine type is 16F1827
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\eigo\AppData\Local\Temp\s7bk.o
+C:\Users\dexte\AppData\Local\Temp\xcAs42o.o
                 end_init                              2        2        2        0       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2        0       4
@@ -64,6 +65,7 @@ dist/default/production\I2C_LCD.X.production.o
                 cstackCOMMON                         70       70        E       70       1
                 dataBANK0                            26       26        4       20       1
                 bssBANK0                             2A       2A        1       20       1
+                stringtext3                         80A      80A        2     1000       0
                 stringtext2                         806      806        4     1000       0
                 stringtext1                         800      800        6     1000       0
                 idataBANK0                          5DB      5DB        4      BB6       0
@@ -93,6 +95,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 idataBANK0                          5DB      5DB        4         0
 
         CLASS   STRCODE        
+                stringtext3                         80A      80A        2         0
                 stringtext2                         806      806        4         0
                 stringtext1                         800      800        6         0
 
@@ -274,7 +277,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 maintext                       0006C5  00003B  000700       D8A       0  CODE        2
                 text4                          000700  0000EC  0007EC       E00       0  CODE        2
                 cinit                          0007EC  000014  000800       FD8       0  CODE        2
-                stringtext1                    000800  00000A  00080A      1000       0  STRCODE     2
+                stringtext1                    000800  00000C  00080C      1000       0  STRCODE     2
 
 
 UNUSED ADDRESS RANGES
@@ -287,12 +290,12 @@ UNUSED ADDRESS RANGES
         BANK4            00220-0024F              30           1
         BIGRAM           02000-0216F             170           1
         CODE             00004-005D6             5D3           2
-                         0080A-00FFF             7F6
+                         0080C-00FFF             7F4
         CONST            00004-005D6             100           2
-                         0080A-00FFF             100
+                         0080C-00FFF             100
         EEDATA           0F000-0F0FF             100           2
         ENTRY            00004-005D6             100           2
-                         0080A-00FFF             100
+                         0080C-00FFF             100
         IDLOC            08000-08003               4           2
         RAM              0002B-0006F              45           1
                          000A0-000EF              50
@@ -333,9 +336,9 @@ UNUSED ADDRESS RANGES
         SFR9             00480-004EF              70           1
         STACK            0200B-0216F             165           1
         STRCODE          00004-005D6             5D3           2
-                         0080A-00FFF             7F6
+                         0080C-00FFF             7F4
         STRING           00004-005D6             100           2
-                         0080A-00FFF             100
+                         0080C-00FFF             100
 
                                   Symbol Table
 
@@ -449,7 +452,7 @@ __Hsfr6                          sfr6         00000
 __Hsfr7                          sfr7         00000
 __Hsfr8                          sfr8         00000
 __Hsfr9                          sfr9         00000
-__Hspace_0                       (abs)        0080A
+__Hspace_0                       (abs)        0080C
 __Hspace_1                       (abs)        0007E
 __Hspace_2                       (abs)        00000
 __Hspace_3                       (abs)        00000
@@ -459,6 +462,7 @@ __Hstrings                       strings      00000
 __Hstringtext1                   stringtext1  00000
 __Hstringtext2                   stringtext2  00000
 __Hstringtext3                   stringtext3  00000
+__Hstringtext4                   stringtext4  00000
 __Htext                          text         00000
 __Labs1                          abs1         00000
 __Lbank0                         bank0        00000
@@ -555,8 +559,9 @@ __Lstrings                       strings      00000
 __Lstringtext1                   stringtext1  00000
 __Lstringtext2                   stringtext2  00000
 __Lstringtext3                   stringtext3  00000
+__Lstringtext4                   stringtext4  00000
 __Ltext                          text         00000
-__S0                             (abs)        0080A
+__S0                             (abs)        0080C
 __S1                             (abs)        0007E
 __S2                             (abs)        00000
 __S3                             (abs)        00000
@@ -591,7 +596,8 @@ __pidataBANK0                    idataBANK0   005DB
 __pmaintext                      maintext     006C5
 __pstringtext1                   stringtext1  00800
 __pstringtext2                   stringtext2  00806
-__pstringtext3                   stringtext3  00000
+__pstringtext3                   stringtext3  0080A
+__pstringtext4                   stringtext4  00000
 __ptext1                         text1        0066B
 __ptext10                        text10       00601
 __ptext11                        text11       005ED
@@ -648,7 +654,7 @@ intlevel5                        functab      00000
 lcd_cmd@cmd                      cstackCOMMON 00071
 lcd_print@cmd                    cstackCOMMON 0007B
 lcd_print@str                    cstackCOMMON 00078
-lcd_set_cursor@F2500             dataBANK0    00026
+lcd_set_cursor@F2502             dataBANK0    00026
 lcd_set_cursor@cmd               cstackBANK0  00025
 lcd_set_cursor@col               cstackBANK0  00024
 lcd_set_cursor@row               cstackCOMMON 00078
@@ -657,475 +663,6 @@ reset_vec                        reset_vec    00000
 start                            init         00002
 start_initialization             cinit        007EC
 wtemp0                           (abs)        0007E
-
-
-FUNCTION INFORMATION:
-
- *************** function _main *****************
- Defined at:
-		line 7 in file "main.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, fsr0l, fsr0h, fsr1l, fsr1h, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
-      Params:         0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0
-      Temps:          2       0       0       0       0       0
-      Totals:         2       0       0       0       0       0
-Total ram usage:        2 bytes
- Hardware stack levels required when called:    5
- This function calls:
-		_SYSTEM_Initialize
-		_lcd_backlight
-		_lcd_init
-		_lcd_print
-		_lcd_set_cursor
- This function is called by:
-		Startup code after reset
- This function uses a non-reentrant model
-
-
- *************** function _lcd_set_cursor *****************
- Defined at:
-		line 123 in file "lcd_lib.c"
- Parameters:    Size  Location     Type
-  col             1    wreg     unsigned char 
-  row             1    8[COMMON] unsigned char 
- Auto vars:     Size  Location     Type
-  col             1    4[BANK0 ] unsigned char 
-  row_offsets     4    0[BANK0 ] unsigned char [4]
-  cmd             1    5[BANK0 ] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
-      Params:         1       0       0       0       0       0
-      Locals:         0       6       0       0       0       0
-      Temps:          1       0       0       0       0       0
-      Totals:         2       6       0       0       0       0
-Total ram usage:        8 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    4
- This function calls:
-		_command
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function _lcd_print *****************
- Defined at:
-		line 132 in file "lcd_lib.c"
- Parameters:    Size  Location     Type
-  str             2    8[COMMON] PTR unsigned char 
-		 -> STR_2(6), STR_1(4), 
- Auto vars:     Size  Location     Type
-  cmd             1   11[COMMON] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
-      Params:         2       0       0       0       0       0
-      Locals:         1       0       0       0       0       0
-      Temps:          1       0       0       0       0       0
-      Totals:         4       0       0       0       0       0
-Total ram usage:        4 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    4
- This function calls:
-		_command
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function _command *****************
- Defined at:
-		line 139 in file "lcd_lib.c"
- Parameters:    Size  Location     Type
-  val             1    wreg     unsigned char 
-  mode            1    2[COMMON] unsigned char 
- Auto vars:     Size  Location     Type
-  val             1    5[COMMON] unsigned char 
-  lownib          1    7[COMMON] unsigned char 
-  highnib         1    6[COMMON] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
-      Params:         1       0       0       0       0       0
-      Locals:         3       0       0       0       0       0
-      Temps:          2       0       0       0       0       0
-      Totals:         6       0       0       0       0       0
-Total ram usage:        6 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    3
- This function calls:
-		_lcd_cmd
- This function is called by:
-		_lcd_set_cursor
-		_lcd_print
-		_lcd_clear
- This function uses a non-reentrant model
-
-
- *************** function _lcd_init *****************
- Defined at:
-		line 27 in file "lcd_lib.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
-      Params:         0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0
-      Temps:          2       0       0       0       0       0
-      Totals:         2       0       0       0       0       0
-Total ram usage:        2 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    3
- This function calls:
-		_lcd_cmd
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function _lcd_backlight *****************
- Defined at:
-		line 113 in file "lcd_lib.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
-      Params:         0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0
-      Temps:          1       0       0       0       0       0
-      Totals:         1       0       0       0       0       0
-Total ram usage:        1 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    3
- This function calls:
-		_lcd_cmd
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function _lcd_cmd *****************
- Defined at:
-		line 19 in file "lcd_lib.c"
- Parameters:    Size  Location     Type
-  cmd             1    wreg     unsigned char 
- Auto vars:     Size  Location     Type
-  cmd             1    1[COMMON] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
-      Params:         0       0       0       0       0       0
-      Locals:         1       0       0       0       0       0
-      Temps:          0       0       0       0       0       0
-      Totals:         1       0       0       0       0       0
-Total ram usage:        1 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    2
- This function calls:
-		_i2c_start
-		_i2c_stop
-		_i2c_write
- This function is called by:
-		_lcd_init
-		_lcd_backlight
-		_command
- This function uses a non-reentrant model
-
-
- *************** function _i2c_write *****************
- Defined at:
-		line 26 in file "i2c.c"
- Parameters:    Size  Location     Type
-  data            1    wreg     unsigned char 
- Auto vars:     Size  Location     Type
-  data            1    0[COMMON] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
-      Params:         0       0       0       0       0       0
-      Locals:         1       0       0       0       0       0
-      Temps:          0       0       0       0       0       0
-      Totals:         1       0       0       0       0       0
-Total ram usage:        1 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    1
- This function calls:
-		_i2c_wait
- This function is called by:
-		_lcd_cmd
- This function uses a non-reentrant model
-
-
- *************** function _i2c_stop *****************
- Defined at:
-		line 15 in file "i2c.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		None
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
-      Params:         0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_lcd_cmd
- This function uses a non-reentrant model
-
-
- *************** function _i2c_start *****************
- Defined at:
-		line 9 in file "i2c.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
-      Params:         0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    1
- This function calls:
-		_i2c_wait
- This function is called by:
-		_lcd_cmd
- This function uses a non-reentrant model
-
-
- *************** function _i2c_wait *****************
- Defined at:
-		line 5 in file "i2c.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
-      Params:         0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_i2c_start
-		_i2c_write
-		_i2c_repeated_start
-		_i2c_read
- This function uses a non-reentrant model
-
-
- *************** function _SYSTEM_Initialize *****************
- Defined at:
-		line 50 in file "mcc_generated_files/mcc.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
-      Params:         0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    1
- This function calls:
-		_OSCILLATOR_Initialize
-		_PIN_MANAGER_Initialize
-		_WDT_Initialize
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function _WDT_Initialize *****************
- Defined at:
-		line 68 in file "mcc_generated_files/mcc.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
-      Params:         0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_SYSTEM_Initialize
- This function uses a non-reentrant model
-
-
- *************** function _PIN_MANAGER_Initialize *****************
- Defined at:
-		line 55 in file "mcc_generated_files/pin_manager.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
-      Params:         0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_SYSTEM_Initialize
- This function uses a non-reentrant model
-
-
- *************** function _OSCILLATOR_Initialize *****************
- Defined at:
-		line 58 in file "mcc_generated_files/mcc.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
-      Params:         0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_SYSTEM_Initialize
- This function uses a non-reentrant model
-
 
 
 MODULE INFORMATION
