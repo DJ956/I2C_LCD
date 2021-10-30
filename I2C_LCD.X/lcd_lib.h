@@ -22,7 +22,7 @@ extern "C" {
     void lcd_cmd(uint8_t cmd);
     void lcd_clear();
     void lcd_set_cursor(uint8_t col, uint8_t row);
-    void lcd_print();
+    void lcd_print(char *str);
     
     void command(uint8_t val, uint8_t mode);
     
